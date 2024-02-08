@@ -9,6 +9,10 @@
     position: absolute
 }
 
+.bg-none {
+    background: none;
+}
+
 .bg-white {
     background: white;
 }
@@ -22,9 +26,23 @@
     flex-grow: 1;
 }
 
+.flex-col {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row !important;
+}
+
 .flex-items-center {
     display: flex;
     align-items: center;
+}
+
+.flex-items-end {
+    display: flex;
+    align-items: flex-end;
 }
 
 .column-start {
@@ -68,12 +86,21 @@
     font-weight: 500;
 }
 
+.text-bold {
+    font-weight: bold;
+}
+
+
 .text-white {
     color: white;
 }
 
 .text-main-col {
     color: var(--main-bg-color);
+}
+
+.text-main-col:hover {
+    color: var(--main-hover-bg-color);
 }
 
 .text-dark {
@@ -103,6 +130,10 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.user-select-none {
+    user-select: none;
 }
 
 .line-4 {
@@ -145,6 +176,11 @@
     width: 100%;
 }
 
+.checkbox_size {
+    width: 20px;
+    height: 20px;
+}
+
 .m-0 {
     margin: 0;
 }
@@ -155,6 +191,10 @@
 
 .mb-8px {
     margin-bottom: 8px;
+}
+
+.p-0 {
+    padding: 0;
 }
 
 .p-0-imp {
@@ -173,6 +213,10 @@
     padding-bottom: 10px !important;
 }
 
+.pb-2 {
+    padding-bottom: 2rem;
+}
+
 .d-block {
     display: block;
 }
@@ -183,6 +227,10 @@
 
 .d-none-imp {
     display: none !important;
+}
+
+.static {
+    position: static !important;
 }
 
 .relative {
@@ -208,6 +256,10 @@
 .max-h-popup {
     max-height: 500px !important;
     z-index: 100;
+}
+
+.max-h-75vh {
+    max-height: 75vh !important;
 }
 
 .top-0 {
@@ -238,6 +290,10 @@
     height: 100%;
 }
 
+.br-12px {
+    border-radius: 12px;
+}
+
 .under_mobile_nav {
     position: relative;
     opacity: 0;
@@ -247,6 +303,15 @@
 .back_arrow {
     opacity: 0;
     transition: 1s all !important;
+}
+
+.bottom_choose {
+    top: 80px !important;
+    bottom: initial !important;
+}
+
+.calendar_top {
+    top: -15px !important;
 }
 
 .left-n100 {
@@ -266,5 +331,13 @@ a.text-white:hover {
 }
 
 a.text-dark:hover {
+    color: var(--link-hover-red);
+}
+
+.hotel_text:hover {
+    color: var(--link-hover-red);
+}
+
+.hover_red:hover {
     color: var(--link-hover-red);
 }

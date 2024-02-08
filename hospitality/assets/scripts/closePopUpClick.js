@@ -1,4 +1,3 @@
-
 function closeOutsideClickBlock(inputID, popupID) {
     document.addEventListener('click', function(event) {
         const inputItem = document.getElementById(`${inputID}`)
@@ -10,8 +9,10 @@ function closeOutsideClickBlock(inputID, popupID) {
             popupBlock.classList.remove('max-h-popup')
         }
 
-        if (!dropMenu.classList.contains('max-h-popup')) {
-            dropMenuArrow.classList.remove('rotate-180')
+        if (dropMenuArrow) {
+            if (!dropMenu.classList.contains('max-h-popup')) {
+                dropMenuArrow.classList.remove('rotate-180')
+            }
         }
     })
 }
