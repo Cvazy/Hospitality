@@ -352,6 +352,7 @@ header {
   background-size: cover;
   background-position: center;
   padding: 5rem 0;
+  width: 100%;
 
   @include respondedBy(980px) {
     padding: 0 0 5rem;

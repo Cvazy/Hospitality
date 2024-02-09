@@ -57,10 +57,12 @@ formsSearching.forEach((form) => {
     })
 })
 
-catalogFrom.addEventListener('submit', (event) => {
-    processingForm(catalogFrom)
-    event.preventDefault()
-})
+if (catalogFrom) {
+    catalogFrom.addEventListener('submit', (event) => {
+        processingForm(catalogFrom)
+        event.preventDefault()
+    })
+}
 
 //Поиск по городу
 searchTownInput.addEventListener('input', (event) => {

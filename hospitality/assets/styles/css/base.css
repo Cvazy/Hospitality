@@ -26,6 +26,10 @@
     flex-grow: 1;
 }
 
+.no_grow {
+    flex-grow: 0 !important;
+}
+
 .flex-col {
     display: flex !important;
     flex-direction: column;
