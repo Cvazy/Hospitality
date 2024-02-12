@@ -218,7 +218,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 24px 10%;
   position: fixed;
   top: 0;
-  z-index: 5000;
+  z-index: 1200;
 
   @include respondedTo(980px) {
     display: none;
@@ -311,7 +311,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 5000;
+  z-index: 1200;
 
   @include respondedBy(980px) {
     display: none;
