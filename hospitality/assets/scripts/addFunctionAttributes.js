@@ -7,9 +7,17 @@ const filter = document.getElementById('filter')
 window.addEventListener('resize', () => {
     if (document.body.offsetWidth < 980) {
         burger.setAttribute('onclick', "headerOpenMobile('navigation')")
-        searching.setAttribute('onclick', "headerOpenMobile('searching')")
-        visitors.setAttribute('onclick', "headerOpenMobile('visitors')")
-        calendar.setAttribute('onclick', "headerOpenMobile('calendar')")
+        if (searching) {
+            searching.setAttribute('onclick', "headerOpenMobile('searching')")
+        }
+
+        if (visitors) {
+            visitors.setAttribute('onclick', "headerOpenMobile('visitors')")
+        }
+
+        if (calendar) {
+            calendar.setAttribute('onclick', "headerOpenMobile('calendar')")
+        }
 
         if (filter) {
             filter.setAttribute('onclick', "headerOpenMobile('filter')")
@@ -17,9 +25,18 @@ window.addEventListener('resize', () => {
 
     } else {
         burger.removeAttribute('onclick')
-        searching.removeAttribute('onclick')
-        visitors.removeAttribute('onclick')
-        calendar.removeAttribute('onclick')
+
+        if (searching) {
+            searching.removeAttribute('onclick')
+        }
+
+        if (visitors) {
+            visitors.removeAttribute('onclick')
+        }
+
+        if (calendar) {
+            calendar.removeAttribute('onclick')
+        }
 
         if (filter) {
             filter.removeAttribute('filter')
@@ -29,9 +46,18 @@ window.addEventListener('resize', () => {
 
 if (window.innerWidth < 980) {
     burger.setAttribute('onclick', "headerOpenMobile('navigation')")
-    searching.setAttribute('onclick', "headerOpenMobile('searching')")
-    visitors.setAttribute('onclick', "headerOpenMobile('visitors')")
-    calendar.setAttribute('onclick', "headerOpenMobile('calendar')")
+    
+    if (searching) {
+        searching.setAttribute('onclick', "headerOpenMobile('searching')")
+    }
+
+    if (visitors) {
+        visitors.setAttribute('onclick', "headerOpenMobile('visitors')")
+    }
+
+    if (calendar) {
+        calendar.setAttribute('onclick', "headerOpenMobile('calendar')")
+    }
 
     if (filter) {
         filter.setAttribute('onclick', "headerOpenMobile('filter')")

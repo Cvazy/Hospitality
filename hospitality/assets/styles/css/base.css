@@ -21,6 +21,18 @@
     background: #F1F4F8;
 }
 
+.bg-gray {
+    background: #F1F4F8 !important;
+}
+
+.bg-gray:hover {
+    background: #E2E9F2 !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .flex-grow {
     display: flex;
     flex-grow: 1;
@@ -49,6 +61,11 @@
     align-items: flex-end;
 }
 
+.flex-items-start {
+    display: flex;
+    align-items: flex-start;
+}
+
 .column-start {
     flex-direction: column;
     align-items: flex-start !important;
@@ -66,6 +83,10 @@
     padding: 23px 10px !important;
 }
 
+.py-23px-imp {
+    padding: 23px 0 !important;
+}
+
 .border-underline {
     border-bottom: 1px solid white;
 }
@@ -80,6 +101,10 @@
 
 .text-center {
     text-align: center;
+}
+
+.text-end {
+    text-align: end;
 }
 
 .text-normal {
@@ -136,6 +161,15 @@
     text-overflow: ellipsis;
 }
 
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-scroll::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
 .user-select-none {
     user-select: none;
 }
@@ -180,6 +214,14 @@
     width: 100%;
 }
 
+.w-fit {
+    width: fit-content;
+}
+
+.w-auto {
+    width: auto;
+}
+
 .checkbox_size {
     width: 20px;
     height: 20px;
@@ -195,6 +237,10 @@
 
 .mb-8px {
     margin-bottom: 8px;
+}
+
+.mb-20px {
+    margin-bottom: 20px;
 }
 
 .p-0 {
@@ -262,8 +308,16 @@
     z-index: 100;
 }
 
+.max-h-icons {
+    max-height: 300px !important;
+}
+
 .max-h-75vh {
     max-height: 75vh !important;
+}
+
+.max-h-0-imp {
+    max-height: 0 !important;
 }
 
 .top-0 {
@@ -298,6 +352,10 @@
     border-radius: 12px;
 }
 
+.br-12px-imp {
+    border-radius: 12px !important;
+}
+
 .under_mobile_nav {
     position: relative;
     opacity: 0;
@@ -330,6 +388,10 @@
     transform: rotate(180deg);
 }
 
+.rotate-n90 {
+    transform: rotate(-90deg);
+}
+
 a.text-white:hover {
     color: var(--link-hover-red);
 }
@@ -344,4 +406,28 @@ a.text-dark:hover {
 
 .hover_red:hover {
     color: var(--link-hover-red);
+}
+
+.visible_desc::after {
+    display: none;
+}
+
+.line_green {
+    background: var(--light-green);
+}
+
+.line_yellow {
+    background: #CBDA24;
+}
+
+.line_orange {
+    background: #FFB930;
+}
+
+.line_red {
+    background: #FF5A5F;
+}
+
+.col_gap-32px {
+    column-gap: 32px !important;
 }

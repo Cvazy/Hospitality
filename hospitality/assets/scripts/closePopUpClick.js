@@ -7,6 +7,11 @@ function closeOutsideClickBlock(inputID, popupID) {
 
         if (!isClickInsideInputItem && !isClickInsidePopup) {
             popupBlock.classList.remove('max-h-popup')
+
+            if (inputID === 'chooseSorted') {
+                inputItem.classList.remove('br-bottom-0')
+                popupBlock.classList.remove('open_filter_type')
+            }
         }
 
         if (dropMenuArrow) {
@@ -21,3 +26,4 @@ function closeOutsideClickBlock(inputID, popupID) {
 closeOutsideClickBlock('search_town', 'select_town')
 closeOutsideClickBlock('search_people', 'choose_people')
 closeOutsideClickBlock('hotel', 'dropMenu')
+closeOutsideClickBlock('chooseSorted', 'sortedList')
