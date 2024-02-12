@@ -10,6 +10,8 @@ function closeOutsideClickBlock(inputID, popupID) {
 
             if (inputID === 'chooseSorted') {
                 inputItem.classList.remove('br-bottom-0')
+                const itemArrow = inputItem.querySelector('img')
+                itemArrow.classList.remove('rotate-180')
                 popupBlock.classList.remove('open_filter_type')
             }
         }
