@@ -65,81 +65,85 @@ if (catalogFrom) {
 }
 
 //Поиск по городу
-searchTownInput.addEventListener('input', (event) => {
-    if (event.target.value) {
-        searchingBlock.classList.add('max-h-popup')
-        searchTownInput.classList.remove('error')
-    } else {
-        searchingBlock.classList.remove('max-h-popup')
-        searchTownInput.classList.add('error')
-    }
-
-    const nothingSearchItem = searchingBlock.querySelector('.nothing_search')
-
-    const searchItems = searchingBlock.querySelectorAll('.finding_item')
-
-    searchItems.forEach((item) => {
-       if (!item.textContent.trim().toLowerCase().includes(event.target.value.trim().toLowerCase())) {
-           item.classList.add('d-none')
-       } else {
-           item.classList.remove('d-none')
-       }
-
-       item.addEventListener('click', () => {
-           if (!item.classList.contains('nothing_search')) {
-               searchTownInput.value = item.textContent.trim()
-               searchingBlock.classList.remove('max-h-popup')
-           }
-       })
-    })
-
-    const checkNothing = Array.from(searchItems).filter((item) => !item.classList.contains('d-none'))
-
-    if (checkNothing.length === 0) {
-        nothingSearchItem.classList.remove('d-none')
-    } else {
-        nothingSearchItem.classList.add('d-none')
-    }
-})
-
-//Поиск по городу для каталога
-townInputMobile.addEventListener('input', (event) => {
-    if (event.target.value) {
-        searchingBlockMobile.classList.add('max-h-popup')
-        townInputMobile.classList.remove('error')
-    } else {
-        searchingBlockMobile.classList.remove('max-h-popup')
-        townInputMobile.classList.add('error')
-    }
-
-    const nothingSearchItem = searchingBlockMobile.querySelector('.nothing_search-mobile')
-
-    const searchItems = searchingBlockMobile.querySelectorAll('.finding_item')
-
-    searchItems.forEach((item) => {
-        if (!item.textContent.trim().toLowerCase().includes(event.target.value.trim().toLowerCase())) {
-            item.classList.add('d-none')
+if (searchTownInput) {
+    searchTownInput.addEventListener('input', (event) => {
+        if (event.target.value) {
+            searchingBlock.classList.add('max-h-popup')
+            searchTownInput.classList.remove('error')
         } else {
-            item.classList.remove('d-none')
+            searchingBlock.classList.remove('max-h-popup')
+            searchTownInput.classList.add('error')
         }
 
-        item.addEventListener('click', () => {
-            if (!item.classList.contains('nothing_search')) {
-                townInputMobile.value = item.textContent.trim()
-                mobileTown.textContent = item.textContent.trim()
-                searchingBlockMobile.classList.remove('max-h-popup')
+        const nothingSearchItem = searchingBlock.querySelector('.nothing_search')
+
+        const searchItems = searchingBlock.querySelectorAll('.finding_item')
+
+        searchItems.forEach((item) => {
+            if (!item.textContent.trim().toLowerCase().includes(event.target.value.trim().toLowerCase())) {
+                item.classList.add('d-none')
+            } else {
+                item.classList.remove('d-none')
             }
+
+            item.addEventListener('click', () => {
+                if (!item.classList.contains('nothing_search')) {
+                    searchTownInput.value = item.textContent.trim()
+                    searchingBlock.classList.remove('max-h-popup')
+                }
+            })
         })
+
+        const checkNothing = Array.from(searchItems).filter((item) => !item.classList.contains('d-none'))
+
+        if (checkNothing.length === 0) {
+            nothingSearchItem.classList.remove('d-none')
+        } else {
+            nothingSearchItem.classList.add('d-none')
+        }
     })
+}
 
-    const checkNothing = Array.from(searchItems).filter((item) => !item.classList.contains('d-none'))
+//Поиск по городу для каталога
+if (townInputMobile) {
+    townInputMobile.addEventListener('input', (event) => {
+        if (event.target.value) {
+            searchingBlockMobile.classList.add('max-h-popup')
+            townInputMobile.classList.remove('error')
+        } else {
+            searchingBlockMobile.classList.remove('max-h-popup')
+            townInputMobile.classList.add('error')
+        }
 
-    if (checkNothing.length === 0) {
-        nothingSearchItem.classList.remove('d-none')
-    } else {
-        nothingSearchItem.classList.add('d-none')
-    }
-})
+        const nothingSearchItem = searchingBlockMobile.querySelector('.nothing_search-mobile')
+
+        const searchItems = searchingBlockMobile.querySelectorAll('.finding_item')
+
+        searchItems.forEach((item) => {
+            if (!item.textContent.trim().toLowerCase().includes(event.target.value.trim().toLowerCase())) {
+                item.classList.add('d-none')
+            } else {
+                item.classList.remove('d-none')
+            }
+
+            item.addEventListener('click', () => {
+                if (!item.classList.contains('nothing_search')) {
+                    townInputMobile.value = item.textContent.trim()
+                    mobileTown.textContent = item.textContent.trim()
+                    searchingBlockMobile.classList.remove('max-h-popup')
+                }
+            })
+        })
+
+        const checkNothing = Array.from(searchItems).filter((item) => !item.classList.contains('d-none'))
+
+        if (checkNothing.length === 0) {
+            nothingSearchItem.classList.remove('d-none')
+        } else {
+            nothingSearchItem.classList.add('d-none')
+        }
+    })
+}
 
 //Выбор состава посетителей
 searchPeopleInput.addEventListener('click', (event) => {

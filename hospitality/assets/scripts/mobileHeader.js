@@ -18,6 +18,8 @@ const mobileDate = document.querySelector('.mobile_date')
 
 const main = document.querySelector('main')
 
+const editVisitDate = document.querySelectorAll('.edit_booking_input')
+
 function headerOpenMobile(block) {
     if (mtMain) mtMain.classList.add('m-0-imp')
 

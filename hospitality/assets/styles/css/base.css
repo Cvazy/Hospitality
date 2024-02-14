@@ -271,6 +271,10 @@
     display: block;
 }
 
+.d-flex {
+    display: flex;
+}
+
 .d-none {
     display: none;
 }
@@ -322,6 +326,10 @@
 
 .top-0 {
     top: 0;
+}
+
+.top-n48 {
+    top: -48px;
 }
 
 .left-0 {
