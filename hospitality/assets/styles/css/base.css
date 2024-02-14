@@ -4,6 +4,10 @@
     border: 1px solid #FF5A5F !important;
 }
 
+.br-main-color {
+    border: 1px solid var(--main-bg-color);
+}
+
 #emailError {
     color: #FF5A5F;
     position: absolute
