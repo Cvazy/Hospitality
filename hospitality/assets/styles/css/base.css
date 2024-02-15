@@ -8,6 +8,10 @@
     border: 1px solid var(--main-bg-color);
 }
 
+.bg-light-blue {
+    background: #E2E9F2 !important;
+}
+
 #emailError {
     color: #FF5A5F;
     position: absolute
@@ -31,6 +35,10 @@
 
 .bg-gray:hover {
     background: #E2E9F2 !important;
+}
+
+.align-center {
+    align-self: center;
 }
 
 .flex-wrap {
@@ -366,6 +374,10 @@
 
 .br-12px-imp {
     border-radius: 12px !important;
+}
+
+.br-20px {
+    border-radius: 20px;
 }
 
 .under_mobile_nav {
