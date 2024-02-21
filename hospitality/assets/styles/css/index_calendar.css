@@ -1,0 +1,12 @@
+@media (max-width: 1024px) {
+    .flatpickr-calendar {
+        left: 10% !important;
+        right: 10% !important;
+    }
+}
+
+@media (max-width: 980px) {
+    .flatpickr-calendar {
+        top: 92px !important;
+    }
+}

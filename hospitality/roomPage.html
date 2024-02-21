@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex" />
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible"
         content="ie=edge">
+  <meta name="description" content="Page Room">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="assets/styles/css/style.css">
   <link rel="stylesheet" href="assets/styles/css/base.css">
@@ -20,6 +22,222 @@
   <title>Hospitality - Карточка номера</title>
 </head>
 <body>
+
+<div class="d-none-imp auth_blackout blackout h-full-imp flex-items-baseline">
+  <div class="d-none-imp auth modal_help_form auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between">
+        <p class="help_form__title">
+          Помощь в регистрации
+        </p>
+
+        <div class="modal_help_form__close">
+          <img src="assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form modal_help_auth_form" data-modal-auth-block="help">
+        <div class="modal_auth_form__wrapper">
+          <p class="m-0 text-main-gray lg-text text-start">
+            Наши специалисты бесплатно помогут вам зарегистрировать вашу компанию в нашем сервисе
+          </p>
+
+          <div class="modal_auth_form__input">
+            <input type="text" name="help_name" placeholder="Имя">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="help_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="tel" name="help_phone" placeholder="Телефон">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Оставить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="d-none-imp auth modal_recovery_form auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between">
+        <p class="recovery_form__title">
+          Помощь в регистрации
+        </p>
+
+        <div class="modal_recovery_form__close">
+          <img src="assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form modal_recovery_auth_form" data-modal-auth-block="help">
+        <div class="modal_auth_form__wrapper">
+          <p class="m-0 text-main-gray lg-text text-start">
+            Для восстановления пароля введите адрес электронной почты, указанный при бронировании:
+          </p>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="recovery_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Восстановить пароль
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="auth main_modal_auth auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between modal_auth__title gap-16px" data-modal-auth-title="login">
+        <p class="help_form__title">
+          Войдите в личный кабинет
+        </p>
+
+        <div class="auth_blackout_close">
+          <img src="assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <div class="d-none-imp w-full flex-items-center justify-between modal_auth__title gap-16px" data-modal-auth-title="registration">
+        <p class="help_form__title">
+          Зарегистрируйте личный кабинет
+        </p>
+
+        <div class="auth_blackout_close">
+          <img src="assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <div class="auth_modal__navigation">
+        <button type="button" data-modal-auth-btn="login" class="btn auth_modal__navigation-item modal_auth_block_active">
+          Войти
+        </button>
+
+        <button type="button" data-modal-auth-btn="registration" class="btn auth_modal__navigation-item">
+          Зарегистрироваться
+        </button>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form" data-modal-auth-block="login">
+        <div class="modal_auth_form__wrapper">
+          <div class="modal_auth_form__input">
+            <input type="email" name="login_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input class="mb_forget" type="password" name="login_password" placeholder="Пароль">
+
+            <img class="input_eye" src="assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+
+            <a href="#" class="not-decor-link text-main-col sm-text modal_auth_recovery">
+              Забыли пароль?
+            </a>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Войти
+        </button>
+      </form>
+
+      <form method="post" action="#" class="d-none-imp modal_auth_form" data-modal-auth-block="registration">
+        <div class="modal_auth_form__wrapper">
+          <div class="modal_auth_form__input">
+            <input type="text" name="reg_name" placeholder="Имя">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="text" name="reg_lastname" placeholder="Фамилия">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="reg_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="password" name="reg_password1" placeholder="Пароль">
+
+            <img class="input_eye" src="assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="password" name="reg_password2" placeholder="Повторите пароль">
+
+            <img class="input_eye" src="assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Зарегистрироваться
+        </button>
+      </form>
+
+      <p class="alt_auth">
+        Или войдите через
+      </p>
+
+      <div class="auth_network">
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="assets/images/auth/Google.svg" alt="Google" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              Google
+            </p>
+          </div>
+        </a>
+
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="assets/images/auth/Apple.svg" alt="Apple" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              Apple
+            </p>
+          </div>
+        </a>
+
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="assets/images/auth/VK.svg" alt="VK" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              VK
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <a href="#" class="d-none-imp not-decor-link modal_auth_info text-main-col">
+        <img class="d-block" src="assets/images/auth/info-circle.svg" alt="Icon" loading="lazy">
+
+        Вы можете обратиться к нашим специалистам и они сделают это за Вас
+      </a>
+
+      <p class="m-0 xs-text text-main-gray text-start">
+        Входя в аккаунт, вы соглашаетесь с
+        <a href="#" class="not-decor-link text-main-col">
+          Условиями использования
+        </a>
+        и
+        <a href="#" class="not-decor-link text-main-col">
+          Политикой обработки персональных данных
+        </a>
+        Hospitality.ru
+      </p>
+    </div>
+  </div>
+</div>
 
 <div class="d-none-imp big_map blackout">
   <div class="big_map__wrapper">
@@ -481,7 +699,7 @@
           </li>
 
           <li>
-            <a href="#" class="not-decor-link mb-nav_text">
+            <a href="about.html" class="not-decor-link mb-nav_text">
               О компании
             </a>
           </li>
@@ -559,7 +777,7 @@
         </p>
       </div>
 
-      <a href="#" class="d-block w-full btn btn__mobile not-decor-link">
+      <a href="partnerPage.html" class="d-block w-full btn btn__mobile not-decor-link">
         Сдать жильё
       </a>
     </div>
@@ -819,7 +1037,7 @@
             </li>
 
             <li class="navigation_list__item">
-              <a href="#" data-text="header" class="text-dark not-decor-link lh-20">
+              <a href="about.html" data-text="header" class="text-dark not-decor-link lh-20">
                 О компании
               </a>
             </li>
@@ -835,13 +1053,13 @@
 
       <div class="flex-items-center gap-3">
         <div>
-          <a href="#" data-text="header" class="text-dark text-medium not-decor-link">
+          <a href="partnerPage.html" data-text="header" class="text-dark text-medium not-decor-link">
             Сдать жильё
           </a>
         </div>
 
         <div>
-          <a href="#" class="not-decor-link btn btn__login">
+          <a href="#" class="not-decor-link btn btn__login open_auth">
             Войти
           </a>
         </div>
@@ -872,13 +1090,13 @@
   <div class="hotel">
     <div class="hotel_block mb-20px">
       <div class="bread_crumbs">
-        <a href="#" class="bread_crumbs__item bread_crumbs__active">
+        <a href="index.html" class="bread_crumbs__item bread_crumbs__active">
           Главная
         </a>
 
         <img class="d-block" src="assets/images/icons/arrow_right_dark.svg" loading="lazy" alt="Arrow">
 
-        <a href="#" class="bread_crumbs__item bread_crumbs__active">
+        <a href="catalog.html" class="bread_crumbs__item bread_crumbs__active">
           Гостиницы Москвы
         </a>
 
@@ -7625,7 +7843,7 @@
       <img src="assets/images/logotypes/dark-logo.svg" loading="lazy" alt="Logotype">
     </a>
 
-    <a href="#" class="flex-items-center btn btn__login not-decor-link link__lg">
+    <a href="partnerPage.html" class="flex-items-center btn btn__login not-decor-link link__lg">
       Сдать жильё
     </a>
   </div>
@@ -7635,7 +7853,7 @@
       Hospitality.ru - часть Hospitality Holdings Inc., мирового лидера в сфере бронирования жилья и сопроводительных услуг.
     </p>
 
-    <a href="#" class="w-full flex-items-center justify-center btn btn__login not-decor-link link__sm">
+    <a href="partnerPage.html" class="w-full flex-items-center justify-center btn btn__login not-decor-link link__sm">
       Сдать жильё
     </a>
 
@@ -7718,7 +7936,7 @@
         </li>
 
         <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
+          <a href="about.html" class="not-decor-link text-dark">
             О компании
           </a>
         </li>
@@ -7853,7 +8071,7 @@
 
         <ul class="footer_nav__list">
           <li class="footer_nav__list-item">
-            <a href="#" class="not-decor-link text-dark">
+            <a href="about.html" class="not-decor-link text-dark">
               О компании
             </a>
           </li>
@@ -8054,7 +8272,16 @@
     })
 </script>
 
+<script src="assets/scripts/auth/openHelpForm.js"></script>
+<script src="assets/scripts/auth/authModal.js"></script>
+<script src="assets/scripts/auth/seePassword.js"></script>
+<script src="assets/scripts/auth/helpFormModal.js"></script>
+<script src="assets/scripts/auth/authValidation.js"></script>
+<script src="assets/scripts/account/emailValidator.js"></script>
+<script src="assets/scripts/auth/openRecoveryPassword.js"></script>
+<script src="assets/scripts/auth/recoveryPasswordModal.js"></script>
 <script src="assets/scripts/mobileHeader.js"></script>
+<script src="assets/scripts/cleanPeopleInput.js"></script>
 <script src="assets/scripts/hotelBtns.js"></script>
 <script src="assets/scripts/roomModal.js"></script>
 <script src="assets/scripts/unificationPeople.js"></script>

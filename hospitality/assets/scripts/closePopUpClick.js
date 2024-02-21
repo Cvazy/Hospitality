@@ -24,8 +24,25 @@ function closeOutsideClickBlock(inputID, popupID) {
     })
 }
 
+const testSearchTown = document.getElementById('search_town')
+const testSearchPeople = document.getElementById('search_people')
+const testSortedList = document.getElementById('chooseSorted')
+const testAccountMenu = document.getElementById('accountIcon')
 
-closeOutsideClickBlock('search_town', 'select_town')
-closeOutsideClickBlock('search_people', 'choose_people')
+if (testSearchTown) {
+    closeOutsideClickBlock('search_town', 'select_town')
+}
+
+if (testSearchPeople) {
+    closeOutsideClickBlock('search_people', 'choose_people')
+}
+
+if (testSortedList) {
+    closeOutsideClickBlock('chooseSorted', 'sortedList')
+}
+
+if (testAccountMenu) {
+    closeOutsideClickBlock('accountIcon', 'accountNav')
+}
+
 closeOutsideClickBlock('hotel', 'dropMenu')
-closeOutsideClickBlock('chooseSorted', 'sortedList')

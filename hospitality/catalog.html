@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex" />
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible"
         content="ie=edge">
+  <meta name="description" content="Page Catalog">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="assets/styles/css/style.css">
   <link rel="stylesheet" href="assets/styles/css/base.css">
@@ -18,6 +20,222 @@
   <title>Hospitality - Каталог</title>
 </head>
 <body>
+
+<div class="d-none-imp auth_blackout blackout h-full-imp flex-items-baseline">
+  <div class="d-none-imp auth modal_help_form auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between">
+        <p class="help_form__title">
+          Помощь в регистрации
+        </p>
+
+        <div class="modal_help_form__close">
+          <img src="assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form modal_help_auth_form" data-modal-auth-block="help">
+        <div class="modal_auth_form__wrapper">
+          <p class="m-0 text-main-gray lg-text text-start">
+            Наши специалисты бесплатно помогут вам зарегистрировать вашу компанию в нашем сервисе
+          </p>
+
+          <div class="modal_auth_form__input">
+            <input type="text" name="help_name" placeholder="Имя">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="help_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="tel" name="help_phone" placeholder="Телефон">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Оставить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="d-none-imp auth modal_recovery_form auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between">
+        <p class="recovery_form__title">
+          Помощь в регистрации
+        </p>
+
+        <div class="modal_recovery_form__close">
+          <img src="assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form modal_recovery_auth_form" data-modal-auth-block="help">
+        <div class="modal_auth_form__wrapper">
+          <p class="m-0 text-main-gray lg-text text-start">
+            Для восстановления пароля введите адрес электронной почты, указанный при бронировании:
+          </p>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="recovery_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Восстановить пароль
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="auth main_modal_auth auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between modal_auth__title gap-16px" data-modal-auth-title="login">
+        <p class="help_form__title">
+          Войдите в личный кабинет
+        </p>
+
+        <div class="auth_blackout_close">
+          <img src="assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <div class="d-none-imp w-full flex-items-center justify-between modal_auth__title gap-16px" data-modal-auth-title="registration">
+        <p class="help_form__title">
+          Зарегистрируйте личный кабинет
+        </p>
+
+        <div class="auth_blackout_close">
+          <img src="assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <div class="auth_modal__navigation">
+        <button type="button" data-modal-auth-btn="login" class="btn auth_modal__navigation-item modal_auth_block_active">
+          Войти
+        </button>
+
+        <button type="button" data-modal-auth-btn="registration" class="btn auth_modal__navigation-item">
+          Зарегистрироваться
+        </button>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form" data-modal-auth-block="login">
+        <div class="modal_auth_form__wrapper">
+          <div class="modal_auth_form__input">
+            <input type="email" name="login_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input class="mb_forget" type="password" name="login_password" placeholder="Пароль">
+
+            <img class="input_eye" src="assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+
+            <a href="#" class="not-decor-link text-main-col sm-text modal_auth_recovery">
+              Забыли пароль?
+            </a>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Войти
+        </button>
+      </form>
+
+      <form method="post" action="#" class="d-none-imp modal_auth_form" data-modal-auth-block="registration">
+        <div class="modal_auth_form__wrapper">
+          <div class="modal_auth_form__input">
+            <input type="text" name="reg_name" placeholder="Имя">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="text" name="reg_lastname" placeholder="Фамилия">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="reg_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="password" name="reg_password1" placeholder="Пароль">
+
+            <img class="input_eye" src="assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="password" name="reg_password2" placeholder="Повторите пароль">
+
+            <img class="input_eye" src="assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Зарегистрироваться
+        </button>
+      </form>
+
+      <p class="alt_auth">
+        Или войдите через
+      </p>
+
+      <div class="auth_network">
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="assets/images/auth/Google.svg" alt="Google" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              Google
+            </p>
+          </div>
+        </a>
+
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="assets/images/auth/Apple.svg" alt="Apple" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              Apple
+            </p>
+          </div>
+        </a>
+
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="assets/images/auth/VK.svg" alt="VK" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              VK
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <a href="#" class="d-none-imp not-decor-link modal_auth_info text-main-col">
+        <img class="d-block" src="assets/images/auth/info-circle.svg" alt="Icon" loading="lazy">
+
+        Вы можете обратиться к нашим специалистам и они сделают это за Вас
+      </a>
+
+      <p class="m-0 xs-text text-main-gray text-start">
+        Входя в аккаунт, вы соглашаетесь с
+        <a href="#" class="not-decor-link text-main-col">
+          Условиями использования
+        </a>
+        и
+        <a href="#" class="not-decor-link text-main-col">
+          Политикой обработки персональных данных
+        </a>
+        Hospitality.ru
+      </p>
+    </div>
+  </div>
+</div>
 
 <div class="under_popup">
   <div class="mobile__menu">
@@ -206,7 +424,7 @@
           </li>
 
           <li>
-            <a href="#" class="not-decor-link mb-nav_text">
+            <a href="about.html" class="not-decor-link mb-nav_text">
               О компании
             </a>
           </li>
@@ -284,7 +502,7 @@
         </p>
       </div>
 
-      <a href="#" class="d-block w-full btn btn__mobile not-decor-link">
+      <a href="partnerPage.html" class="d-block w-full btn btn__mobile not-decor-link">
         Сдать жильё
       </a>
     </div>
@@ -1617,7 +1835,7 @@
   </div>
 </div>
 
-<header class="bg-white pb-2">
+<header class="small_main_px bg-white pb-2">
   <div class="w-full">
     <div class="header__wrapper">
       <div class="header_left">
@@ -1752,7 +1970,7 @@
             </li>
 
             <li class="navigation_list__item">
-              <a href="#" data-text="header" class="text-dark not-decor-link lh-20">
+              <a href="about.html" data-text="header" class="text-dark not-decor-link lh-20">
                 О компании
               </a>
             </li>
@@ -1768,13 +1986,13 @@
 
       <div class="flex-items-center gap-3">
         <div>
-          <a href="#" data-text="header" class="text-dark text-medium not-decor-link">
+          <a href="partnerPage.html" data-text="header" class="text-dark text-medium not-decor-link">
             Сдать жильё
           </a>
         </div>
 
         <div>
-          <a href="#" class="not-decor-link btn btn__login">
+          <a href="#" class="not-decor-link btn btn__login open_auth">
             Войти
           </a>
         </div>
@@ -3140,9 +3358,387 @@
     </div>
 
     <div class="catalog__main">
+      <div class="catalog__map">
+        <div class="map_wrap">
+          <div role="button" class="close_map">
+            <p class="m-0 sm-text text-medium text-dark text-center">
+              Закрыть карту
+            </p>
+
+            <img class="d-block" src="assets/images/icons/close-square-dark.svg" alt="Icon" loading="lazy">
+          </div>
+
+          <div class="map_wrap__list">
+            <div class="catalog_item" data-item-id="1">
+              <div class="catalog_item__wrapper">
+                <div class="catalog_top">
+                  <div class="catalog_image">
+                    <img class="w-full br-12px" src="assets/images/catalog/catalog1.jpg" alt="Image" loading="lazy">
+
+                    <button data-btn-id="1" type="button" class="btn like heart">
+                      <img class="no_like" src="assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                      <img class="d-none-imp click_like" src="assets/images/icons/heart_click.svg" alt="Like">
+                    </button>
+                  </div>
+
+                  <div class="catalog_info">
+                    <div class="flex-items-center justify-between gap-8px">
+                      <div class="flex-items-center gap-4px">
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+                      </div>
+
+                      <a href="#" class="not-decor-link text-main-col sm-text">
+                        На карте
+                      </a>
+                    </div>
+
+                    <div class="catalog_info__main">
+                      <p class="base-text m-0 text-dark">
+                        Гостиница золотое кольцо
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalog_bottom">
+                  <div class="old_price">26 450 ₽</div>
+
+                  <div class="catalog_bottom__info">
+                    <div class="catalog_bottom__left">
+                      <p class="price">25 000 ₽</p>
+
+                      <p class="text-main-gray m-0 base-text">
+                        5 ночей, 2 гостя
+                      </p>
+                    </div>
+
+                    <a href="#" class="not-decor-link catalog_bottom__right base-text">
+                      Подробнее
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog_item" data-item-id="2">
+              <div class="catalog_item__wrapper">
+                <div class="catalog_top">
+                  <div class="catalog_image">
+                    <img class="w-full br-12px" src="assets/images/catalog/catalog2.jpg" alt="Image" loading="lazy">
+
+                    <button data-btn-id="2" type="button" class="btn like heart">
+                      <img class="no_like" src="assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                      <img class="d-none-imp click_like" src="assets/images/icons/heart_click.svg" alt="Like">
+                    </button>
+                  </div>
+
+                  <div class="catalog_info">
+                    <div class="flex-items-center justify-between gap-8px">
+                      <div class="flex-items-center gap-4px">
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+                      </div>
+
+                      <a href="#" class="not-decor-link text-main-col sm-text">
+                        На карте
+                      </a>
+                    </div>
+
+                    <div class="catalog_info__main">
+                      <p class="base-text m-0 text-dark">
+                        Гостиница золотое кольцо
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalog_bottom">
+                  <div class="old_price">26 450 ₽</div>
+
+                  <div class="catalog_bottom__info">
+                    <div class="catalog_bottom__left">
+                      <p class="price">25 000 ₽</p>
+
+                      <p class="text-main-gray m-0 base-text">
+                        5 ночей, 2 гостя
+                      </p>
+                    </div>
+
+                    <a href="#" class="not-decor-link catalog_bottom__right base-text">
+                      Подробнее
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog_item" data-item-id="3">
+              <div class="catalog_item__wrapper">
+                <div class="catalog_top">
+                  <div class="catalog_image">
+                    <img class="w-full br-12px" src="assets/images/catalog/catalog3.jpg" alt="Image" loading="lazy">
+
+                    <button data-btn-id="3" type="button" class="btn like heart">
+                      <img class="no_like" src="assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                      <img class="d-none-imp click_like" src="assets/images/icons/heart_click.svg" alt="Like">
+                    </button>
+                  </div>
+
+                  <div class="catalog_info">
+                    <div class="flex-items-center justify-between gap-8px">
+                      <div class="flex-items-center gap-4px">
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+                      </div>
+
+                      <a href="#" class="not-decor-link text-main-col sm-text">
+                        На карте
+                      </a>
+                    </div>
+
+                    <div class="catalog_info__main">
+                      <p class="base-text m-0 text-dark">
+                        Гостиница золотое кольцо
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalog_bottom">
+                  <div class="old_price">26 450 ₽</div>
+
+                  <div class="catalog_bottom__info">
+                    <div class="catalog_bottom__left">
+                      <p class="price">25 000 ₽</p>
+
+                      <p class="text-main-gray m-0 base-text">
+                        5 ночей, 2 гостя
+                      </p>
+                    </div>
+
+                    <a href="#" class="not-decor-link catalog_bottom__right base-text">
+                      Подробнее
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog_item" data-item-id="4">
+              <div class="catalog_item__wrapper">
+                <div class="catalog_top">
+                  <div class="catalog_image">
+                    <img class="w-full br-12px" src="assets/images/catalog/catalog4.jpg" alt="Image" loading="lazy">
+
+                    <button data-btn-id="4" type="button" class="btn like heart">
+                      <img class="no_like" src="assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                      <img class="d-none-imp click_like" src="assets/images/icons/heart_click.svg" alt="Like">
+                    </button>
+                  </div>
+
+                  <div class="catalog_info">
+                    <div class="flex-items-center justify-between gap-8px">
+                      <div class="flex-items-center gap-4px">
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+                      </div>
+
+                      <a href="#" class="not-decor-link text-main-col sm-text">
+                        На карте
+                      </a>
+                    </div>
+
+                    <div class="catalog_info__main">
+                      <p class="base-text m-0 text-dark">
+                        Гостиница золотое кольцо
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalog_bottom">
+                  <div class="old_price">26 450 ₽</div>
+
+                  <div class="catalog_bottom__info">
+                    <div class="catalog_bottom__left">
+                      <p class="price">25 000 ₽</p>
+
+                      <p class="text-main-gray m-0 base-text">
+                        5 ночей, 2 гостя
+                      </p>
+                    </div>
+
+                    <a href="#" class="not-decor-link catalog_bottom__right base-text">
+                      Подробнее
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog_item" data-item-id="5">
+              <div class="catalog_item__wrapper">
+                <div class="catalog_top">
+                  <div class="catalog_image">
+                    <img class="w-full br-12px" src="assets/images/catalog/catalog5.jpg" alt="Image" loading="lazy">
+
+                    <button data-btn-id="5" type="button" class="btn like heart">
+                      <img class="no_like" src="assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                      <img class="d-none-imp click_like" src="assets/images/icons/heart_click.svg" alt="Like">
+                    </button>
+                  </div>
+
+                  <div class="catalog_info">
+                    <div class="flex-items-center justify-between gap-8px">
+                      <div class="flex-items-center gap-4px">
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+                      </div>
+
+                      <a href="#" class="not-decor-link text-main-col sm-text">
+                        На карте
+                      </a>
+                    </div>
+
+                    <div class="catalog_info__main">
+                      <p class="base-text m-0 text-dark">
+                        Гостиница золотое кольцо
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalog_bottom">
+                  <div class="old_price">26 450 ₽</div>
+
+                  <div class="catalog_bottom__info">
+                    <div class="catalog_bottom__left">
+                      <p class="price">25 000 ₽</p>
+
+                      <p class="text-main-gray m-0 base-text">
+                        5 ночей, 2 гостя
+                      </p>
+                    </div>
+
+                    <a href="#" class="not-decor-link catalog_bottom__right base-text">
+                      Подробнее
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog_item" data-item-id="6">
+              <div class="catalog_item__wrapper">
+                <div class="catalog_top">
+                  <div class="catalog_image">
+                    <img class="w-full br-12px" src="assets/images/catalog/catalog6.jpg" alt="Image" loading="lazy">
+
+                    <button data-btn-id="6" type="button" class="btn like heart">
+                      <img class="no_like" src="assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                      <img class="d-none-imp click_like" src="assets/images/icons/heart_click.svg" alt="Like">
+                    </button>
+                  </div>
+
+                  <div class="catalog_info">
+                    <div class="flex-items-center justify-between gap-8px">
+                      <div class="flex-items-center gap-4px">
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                        <img class="d-block" src="assets/images/icons/star.svg" alt="Star" loading="lazy">
+                      </div>
+
+                      <a href="#" class="not-decor-link text-main-col sm-text">
+                        На карте
+                      </a>
+                    </div>
+
+                    <div class="catalog_info__main">
+                      <p class="base-text m-0 text-dark">
+                        Гостиница золотое кольцо
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalog_bottom">
+                  <div class="old_price">26 450 ₽</div>
+
+                  <div class="catalog_bottom__info">
+                    <div class="catalog_bottom__left">
+                      <p class="price">25 000 ₽</p>
+
+                      <p class="text-main-gray m-0 base-text">
+                        5 ночей, 2 гостя
+                      </p>
+                    </div>
+
+                    <a href="#" class="not-decor-link catalog_bottom__right base-text">
+                      Подробнее
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="map_wrap__iframe">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A480f59f48a90769798f90887dde0237710098ba3a8672039245b86fabeddfc14&amp;source=constructor" width="966" height="656" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+
       <div class="filters">
         <form method="post" action="#" class="filters__wrapper">
-          <a href="#" class="not-decor-link">
+          <a href="#" class="not-decor-link" id="seeMap">
             <div class="filter_map">
               <button class="btn btn__map flex-items-center justify-center gap-12px text-white sm-text text-medium text-nowrap">
                 <img src="assets/images/icons/location_white.svg" alt="Map">
@@ -3634,7 +4230,7 @@
               </div>
             </div>
 
-            <a href="#" class="d-block not-decor-link text-main-col sm-text watch_filter">
+            <a href="#" class="d-block not-decor-link text-main-col sm-text watch_filter p-all">
               Показать все
             </a>
           </div>
@@ -5051,13 +5647,13 @@
   </div>
 </main>
 
-<footer>
+<footer class="small_main_px">
   <div class="footer_top">
     <a href="index.html" class="d-block">
       <img src="assets/images/logotypes/dark-logo.svg" alt="Logotype" loading="lazy">
     </a>
 
-    <a href="#" class="flex-items-center btn btn__login not-decor-link link__lg">
+    <a href="partnerPage.html" class="flex-items-center btn btn__login not-decor-link link__lg">
       Сдать жильё
     </a>
   </div>
@@ -5067,7 +5663,7 @@
       Hospitality.ru - часть Hospitality Holdings Inc., мирового лидера в сфере бронирования жилья и сопроводительных услуг.
     </p>
 
-    <a href="#" class="w-full flex-items-center justify-center btn btn__login not-decor-link link__sm">
+    <a href="partnerPage.html" class="w-full flex-items-center justify-center btn btn__login not-decor-link link__sm">
       Сдать жильё
     </a>
 
@@ -5150,7 +5746,7 @@
         </li>
 
         <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
+          <a href="about.html" class="not-decor-link text-dark">
             О компании
           </a>
         </li>
@@ -5285,7 +5881,7 @@
 
         <ul class="footer_nav__list">
           <li class="footer_nav__list-item">
-            <a href="#" class="not-decor-link text-dark">
+            <a href="about.html" class="not-decor-link text-dark">
               О компании
             </a>
           </li>
@@ -5433,6 +6029,14 @@
     })
 </script>
 
+<script src="assets/scripts/auth/openHelpForm.js"></script>
+<script src="assets/scripts/auth/authModal.js"></script>
+<script src="assets/scripts/auth/seePassword.js"></script>
+<script src="assets/scripts/auth/helpFormModal.js"></script>
+<script src="assets/scripts/auth/authValidation.js"></script>
+<script src="assets/scripts/account/emailValidator.js"></script>
+<script src="assets/scripts/auth/openRecoveryPassword.js"></script>
+<script src="assets/scripts/auth/recoveryPasswordModal.js"></script>
 <script src="assets/scripts/clickLike.js"></script>
 <script src="assets/scripts/displayMode.js"></script>
 <script src="assets/scripts/formatedInput.js"></script>
@@ -5441,11 +6045,13 @@
 <script src="assets/scripts/priceSliderMobile.js"></script>
 <script src="assets/scripts/searching.js"></script>
 <script src="assets/scripts/mainSearch.js"></script>
+<script src="assets/scripts/catalogMap.js"></script>
 <script src="assets/scripts/mainFilter.js"></script>
 <script src="assets/scripts/checkInputPrices.js"></script>
 <script src="assets/scripts/closePopUpClick.js"></script>
 <script src="assets/scripts/searchMobileBottom.js"></script>
 <script src="assets/scripts/mobileHeader.js"></script>
+<script src="assets/scripts/cleanPeopleInput.js"></script>
 <script src="assets/scripts/calendarCheckOpen.js"></script>
 <script src="assets/scripts/dropMenu.js"></script>
 <script src="assets/scripts/createCards/catalog.js"></script>
