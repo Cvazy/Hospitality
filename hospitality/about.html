@@ -10,10 +10,13 @@
   <meta name="description" content="Page About Us">
   <link rel="stylesheet" href="assets/styles/css/style.css">
   <link rel="stylesheet" href="assets/styles/css/base.css">
+  <link rel="stylesheet" href="assets/styles/css/balloon.css">
   <link rel="icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e2dd3cf5-7476-49d0-b880-4467e1101fec&lang=ru_RU" type="text/javascript"></script>
+  <script src="assets/scripts/map/aboutMap.js"></script>
   <title>Hospitality - О нас</title>
 </head>
 <body>
@@ -693,7 +696,15 @@
           </h2>
 
           <div class="how_start__map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa3f928a169dec764bfef66a37031abcea80d2c55d8b96f7465ee012b06c1f097&amp;width=483&amp;height=284&amp;lang=ru_RU&amp;scroll=true"></script>
+            <button type="button" class="btn btn_zoom_in_map custom_btn_map btn_map_about btn_map_about_plus" id="zoomInButton">
+              <img class="d-block" src="assets/images/icons/plus_gray.svg">
+            </button>
+
+            <button type="button" class="btn btn_zoom_out_map custom_btn_map btn_map_about btn_map_about_minus" id="zoomOutButton">
+              <img class="d-block" src="assets/images/icons/minus_gray.svg">
+            </button>
+
+            <div id="map" class="map_catalog"></div>
           </div>
         </div>
 

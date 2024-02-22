@@ -373,39 +373,6 @@ input[type="number"] {
         padding: 0;
       }
 
-      .btn_close_map {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 72px;
-        right: 72px;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        background: rgba(0, 0, 0, 0.4);
-
-        &:hover {
-          background: rgba(0, 0, 0, 0.7);
-        }
-
-        @include respondedBy(980px) {
-          background: white;
-          top: 8px;
-          right: 8px;
-          width: 48px;
-          height: 48px;
-        }
-
-        img {
-          width: 40px;
-
-          @include respondedBy(980px) {
-            width: 20px;
-          }
-        }
-      }
-
       iframe {
         width: 100%;
         height: 100%;
@@ -417,6 +384,78 @@ input[type="number"] {
       }
     }
   }
+}
+
+.custom_btn_map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  width: 60px;
+  z-index: 100;
+  height: 60px;
+  right: 72px;
+  background: rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  @include respondedBy(980px) {
+    background: rgba(0, 0, 0, 0.7);
+    width: 48px;
+    height: 48px;
+    right: 26px;
+  }
+
+  img {
+    width: 40px;
+
+    @include respondedBy(980px) {
+      width: 20px;
+    }
+  }
+}
+
+.btn_close_map {
+  top: 72px;
+
+  @include respondedBy(980px) {
+    top: 8px;
+  }
+}
+
+.btn_zoom_in_map {
+  top: 164px;
+
+  @include respondedBy(980px) {
+    top: 80px;
+  }
+}
+
+.btn_zoom_out_map {
+  top: 240px;
+
+  @include respondedBy(980px) {
+    top: 144px;
+  }
+}
+
+.btn_map_about {
+  right: 25px !important;
+
+  @include respondedBy(767px) {
+    right: 16px !important;
+  }
+}
+
+.btn_map_about_plus {
+  top: 38% !important;
+}
+
+.btn_map_about_minus {
+  top: 50% !important;
 }
 
 .blue_btn {
@@ -1612,6 +1651,23 @@ header {
   }
 }
 
+.custom-marker {
+  @include respondedBy(1280px) {
+    width: 36px;
+    height: 42px;
+  }
+
+  @include respondedBy(980px) {
+    width: 30px;
+    height: 36px;
+  }
+
+  @include respondedBy(980px) {
+    width: 26px;
+    height: 32px;
+  }
+}
+
 .choose_people {
   bottom: 85px;
   width: 100%;
@@ -1895,12 +1951,6 @@ header {
       }
     }
   }
-}
-
-.rating {
-  border-radius: 6px;
-  padding: 4px 8px;
-  background: var(--light-green);
 }
 
 main {
@@ -3739,6 +3789,7 @@ main {
                     .map_block {
                       width: 100%;
                       height: 590px;
+                      transition-property: none;
 
                       @include respondedBy(1440px) {
                         height: 480px;
@@ -3752,25 +3803,10 @@ main {
                         height: 250px;
                       }
 
-                      .custom-marker {
-                        @include respondedBy(1280px) {
-                          width: 36px;
-                          height: 42px;
-                        }
-
-                        @include respondedBy(980px) {
-                          width: 30px;
-                          height: 36px;
-                        }
-
-                        @include respondedBy(980px) {
-                          width: 26px;
-                          height: 32px;
-                        }
-                      }
-
                       ymaps {
                         border-radius: 12px;
+                        width: 100%;
+                        transition-property: none;
                       }
                     }
                   }
@@ -4559,12 +4595,6 @@ main {
 
           @include respondedBy(980px) {
             width: 100%;
-          }
-
-          iframe {
-            border-radius: 24px;
-            width: 100%;
-            height: 100%;
           }
         }
       }
@@ -7559,17 +7589,20 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 48px;
-    max-width: 60%;
+    max-width: 80%;
     width: 100%;
-    padding: 5rem 0 7rem 2.25rem;
+    padding: 5rem 0 7rem 7.5rem;
+
+    @include respondedTo(1800px) {
+      padding: 5rem 0 7rem 15rem;
+    }
 
     @include respondedBy(1280px) {
-      max-width: 80%;
-      padding: 5rem 0 4rem 2.25rem;
+      max-width: 100%;
+      padding: 5rem 2.5rem 4rem;
     }
 
     @include respondedBy(980px) {
-      max-width: 100%;
       padding: 5rem 10% 4rem;
     }
 
@@ -7860,6 +7893,7 @@ main {
       width: 100%;
       height: 70vh;
       margin-top: 48px;
+      position: relative;
 
       @include respondedBy(1280px) {
         margin-top: 42px;
@@ -7932,12 +7966,6 @@ main {
   }
 
   .partner_head {
-    max-width: 75%;
-
-    @include respondedBy(980px) {
-      max-width: 100%;
-    }
-
     .partner_plus {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -8696,6 +8724,18 @@ main {
         gap: 16px;
       }
     }
+  }
+}
+
+.map_catalog {
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  transition-property: none;
+  overflow: hidden;
+
+  ymaps {
+    transition-property: none;
   }
 }
 

@@ -274,6 +274,10 @@
     text-decoration: none;
 }
 
+.gap-1px {
+    gap: 1px;
+}
+
 .gap-1 {
     gap: 1rem;
 }
@@ -605,4 +609,11 @@ a.text-dark:hover {
 
 .col_gap-32px {
     column-gap: 32px !important;
+}
+
+
+.rating {
+    border-radius: 6px;
+    padding: 4px 8px;
+    background: var(--light-green);
 }

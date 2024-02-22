@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="assets/styles/css/style.css">
   <link rel="stylesheet" href="assets/styles/css/base.css">
+  <link rel="stylesheet" href="assets/styles/css/balloon.css">
   <link rel="icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +20,8 @@
   />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="assets/styles/css/fancybox_custom.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e2dd3cf5-7476-49d0-b880-4467e1101fec&lang=ru_RU" type="text/javascript"></script>
+  <script src="assets/scripts/map/roomBalloon.js"></script>
   <title>Hospitality - Карточка номера</title>
 </head>
 <body>
@@ -241,10 +244,19 @@
 
 <div class="d-none-imp big_map blackout">
   <div class="big_map__wrapper">
-    <button type="button" class="btn btn_close_map">
+    <button type="button" class="btn btn_close_map custom_btn_map">
       <img class="d-block" src="assets/images/icons/close-square.svg">
     </button>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A480f59f48a90769798f90887dde0237710098ba3a8672039245b86fabeddfc14&amp;source=constructor" width="966" height="656" frameborder="0"></iframe>
+
+    <button type="button" class="btn btn_zoom_in_map custom_btn_map" id="zoomInButton">
+      <img class="d-block" src="assets/images/icons/plus_gray.svg">
+    </button>
+
+    <button type="button" class="btn btn_zoom_out_map custom_btn_map" id="zoomOutButton">
+      <img class="d-block" src="assets/images/icons/minus_gray.svg">
+    </button>
+
+    <div class="map_catalog" id="map"></div>
   </div>
 </div>
 
