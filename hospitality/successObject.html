@@ -9,8 +9,8 @@
         content="ie=edge">
   <meta name="description" content="Page Success Object Add">
   <link rel="stylesheet" href="assets/styles/css/style.css">
-  <link rel="stylesheet" href="assets/styles/css/base.css">
-  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="assets/styles/css/base.min.css">
+  <link rel="icon" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -214,7 +214,7 @@
 </div>
 
 <header class="bg-white">
-  <div class="w-full">
+  <div class="w-full d-flex justify-center">
     <div class="header__wrapper">
       <div class="header_left">
         <p class="text-light-grey m-0">
@@ -248,7 +248,7 @@
 
   <hr>
 
-  <div class="w-full">
+  <div class="w-full d-flex justify-center">
     <div class="header__wrapper">
       <div class="flex-items-center gap-4">
         <a href="index.html">
@@ -416,76 +416,80 @@
 </header>
 
 <div class="mobile_top_header bg-white">
-  <div class="mobile_top_header__logo">
-    <a href="index.html">
-      <img src="assets/images/logotypes/mobile-dark-logo.svg" loading="lazy" alt="Logotype">
-    </a>
-  </div>
+  <div class="mobile_top_header__wrapper">
+    <div class="mobile_top_header__logo">
+      <a href="index.html">
+        <img src="assets/images/logotypes/mobile-dark-logo.svg" loading="lazy" alt="Logotype">
+      </a>
+    </div>
 
-  <div class="mobile_top_header__menu">
-    <button type="button" class="mb_action mobile_account" id="account">
-      <img src="assets/images/reviews/people1.jpg" loading="lazy" alt="Profile">
-    </button>
+    <div class="mobile_top_header__menu">
+      <button type="button" class="mb_action mobile_account" id="account">
+        <img src="assets/images/reviews/people1.jpg" loading="lazy" alt="Profile">
+      </button>
 
-    <button type="button" class="mb_action" id="burger">
-      <img src="assets/images/icons/dark_burger.svg" loading="lazy" alt="Burger">
-    </button>
+      <button type="button" class="mb_action" id="burger">
+        <img src="assets/images/icons/dark_burger.svg" loading="lazy" alt="Burger">
+      </button>
+    </div>
   </div>
 </div>
 
 <main class="md_padding_under_header">
   <div class="container">
-    <div class="account_form_block">
-      <div class="account_previous">
-        <div class="bread_crumbs m-0-imp">
-          <a href="index.html" class="bread_crumbs__item bread_crumbs__active">
-            Главная
-          </a>
+    <div class="container_block">
+      <div class="account_form_block">
+        <div class="account_previous">
+          <div class="bread_crumbs">
+            <a href="index.html" class="bread_crumbs__item bread_crumbs__active">
+              Главная
+            </a>
 
-          <img class="d-block" src="assets/images/icons/arrow_right_dark.svg" loading="lazy" alt="Arrow">
+            <img class="d-block" src="assets/images/icons/arrow_right_dark.svg" loading="lazy" alt="Arrow">
 
-          <a href="objectAdd.html" class="bread_crumbs__item">
-            Создание объекта
-          </a>
-        </div>
+            <a href="objectAdd.html" class="bread_crumbs__item">
+              Создание объекта
+            </a>
+          </div>
 
-        <div class="success_block">
-          <div class="success_block__container">
-            <div class="success_block__wrapper">
-              <div class="success_block__content">
-                <div class="success_block__content-top">
-                  <div class="success_image">
-                    <img class="d-block" src="assets/images/icons/successBig.svg" alt="Success" loading="lazy">
+          <div class="success_block">
+            <div class="success_block__container">
+              <div class="success_block__wrapper">
+                <div class="success_block__content">
+                  <div class="success_block__content-top">
+                    <div class="success_image">
+                      <img class="d-block" src="assets/images/icons/successBig.svg" alt="Success" loading="lazy">
+                    </div>
+
+                    <h1 class="success_text">
+                      Заявка успешно отправлена
+                    </h1>
                   </div>
 
-                  <h1 class="success_text">
-                    Заявка успешно отправлена
-                  </h1>
-                </div>
+                  <div class="success_block__content-bottom">
+                    <div class="flex-col flex-items-start gap-4px">
+                      <p class="m-0 lg-text text-dark">
+                        Спасибо за регистрацию!
+                      </p>
 
-                <div class="success_block__content-bottom">
-                  <div class="flex-col flex-items-start gap-4px">
-                    <p class="m-0 lg-text text-dark">
-                      Спасибо за регистрацию!
-                    </p>
-
-                    <p class="m-0 lg-text text-dark">
-                      Номер вашей заявки:
-                      <span class="text-main-col">
+                      <p class="m-0 lg-text text-dark">
+                        Номер вашей заявки:
+                        <span class="text-main-col">
                         68574
                       </span>
+                      </p>
+                    </div>
+
+                    <p class="m-0 xs-text text-main-gray">
+                      Ваша заявка отправлена. После подтверждения на Ваш E-mail будет отправлено письмо с данными доступа к управлению вашим объектом размещения.
                     </p>
                   </div>
-
-                  <p class="m-0 xs-text text-main-gray">
-                    Ваша заявка отправлена. После подтверждения на Ваш E-mail будет отправлено письмо с данными доступа к управлению вашим объектом размещения.
-                  </p>
                 </div>
-              </div>
 
-              <a href="index.html" class="not-decor-link btn index">
-                На главную
-              </a>
+                <a href="index.html" class="not-decor-link btn index">
+                  На главную
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -495,142 +499,32 @@
 </main>
 
 <footer>
-  <div class="footer_top">
-    <a href="index.html" class="d-block">
-      <img src="assets/images/logotypes/dark-logo.svg" loading="lazy" alt="Logotype">
-    </a>
+  <div class="footer__wrapper">
+    <div class="footer_top">
+      <a href="index.html" class="d-block">
+        <img src="assets/images/logotypes/dark-logo.svg" alt="Logotype" loading="lazy">
+      </a>
 
-    <a href="partnerPage.html" class="flex-items-center btn btn__login not-decor-link link__lg">
-      Сдать жильё
-    </a>
-  </div>
+      <a href="partnerPage.html" class="flex-items-center btn btn__login not-decor-link link__lg">
+        Сдать жильё
+      </a>
+    </div>
 
-  <div class="footer_center">
-    <p class="text-main-gray m-0 footer_text">
-      Hospitality.ru - часть Hospitality Holdings Inc., мирового лидера в сфере бронирования жилья и сопроводительных услуг.
-    </p>
+    <div class="footer_center">
+      <p class="text-main-gray m-0 footer_text">
+        Hospitality.ru - часть Hospitality Holdings Inc., мирового лидера в сфере бронирования жилья и сопроводительных услуг.
+      </p>
 
-    <a href="partnerPage.html" class="w-full flex-items-center justify-center btn btn__login not-decor-link link__sm">
-      Сдать жильё
-    </a>
+      <a href="partnerPage.html" class="w-full flex-items-center justify-center btn btn__login not-decor-link link__sm">
+        Сдать жильё
+      </a>
 
-    <nav class="footer_nav footer_center-lg">
-      <ul class="footer_nav__list">
-        <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
-          Служба помощи
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Справочный раздел
-          </a>
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="contact.html" class="not-decor-link text-dark">
-            Контакты
-          </a>
-        </li>
-      </ul>
-
-      <ul class="footer_nav__list">
-        <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
-          Гостям
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Как снять жилье
-          </a>
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Гарантии сервиса
-          </a>
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Вопросы и ответы
-          </a>
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Отзывы
-          </a>
-        </li>
-      </ul>
-
-      <ul class="footer_nav__list">
-        <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
-          Хозяевам
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Сдать жилье
-          </a>
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Условия размещения
-          </a>
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Вопросы и ответы
-          </a>
-        </li>
-      </ul>
-
-      <ul class="footer_nav__list">
-        <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
-          О нас
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="about.html" class="not-decor-link text-dark">
-            О компании
-          </a>
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            СМИ о нас
-          </a>
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Вакансии
-          </a>
-        </li>
-
-        <li class="footer_nav__list-item">
-          <a href="#" class="not-decor-link text-dark">
-            Блог
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="footer_center-sm">
-      <div class="sm_footer_nav">
-        <div class="sm_footer_nav__item">
-          <p class="m-0 text-dark base-text">
-            Служба помощи
-          </p>
-
-          <div>
-            <img class="footer_arrow" src="assets/images/icons/arrow_down_dark.svg" loading="lazy" alt="Arrow">
-          </div>
-        </div>
-
+      <nav class="footer_nav footer_center-lg">
         <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Служба помощи
+          </li>
+
           <li class="footer_nav__list-item">
             <a href="#" class="not-decor-link text-dark">
               Справочный раздел
@@ -643,20 +537,12 @@
             </a>
           </li>
         </ul>
-      </div>
-
-      <div class="sm_footer_nav">
-        <div class="sm_footer_nav__item">
-          <p class="m-0 text-dark base-text">
-            Гостям
-          </p>
-
-          <div>
-            <img class="footer_arrow" src="assets/images/icons/arrow_down_dark.svg" loading="lazy" alt="Arrow">
-          </div>
-        </div>
 
         <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Гостям
+          </li>
+
           <li class="footer_nav__list-item">
             <a href="#" class="not-decor-link text-dark">
               Как снять жилье
@@ -681,20 +567,12 @@
             </a>
           </li>
         </ul>
-      </div>
-
-      <div class="sm_footer_nav">
-        <div class="sm_footer_nav__item">
-          <p class="m-0 text-dark base-text">
-            Хозяевам
-          </p>
-
-          <div>
-            <img class="footer_arrow" src="assets/images/icons/arrow_down_dark.svg" loading="lazy" alt="Arrow">
-          </div>
-        </div>
 
         <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Хозяевам
+          </li>
+
           <li class="footer_nav__list-item">
             <a href="#" class="not-decor-link text-dark">
               Сдать жилье
@@ -713,20 +591,12 @@
             </a>
           </li>
         </ul>
-      </div>
-
-      <div class="sm_footer_nav">
-        <div class="sm_footer_nav__item">
-          <p class="m-0 text-dark base-text">
-            О нас
-          </p>
-
-          <div>
-            <img class="footer_arrow" src="assets/images/icons/arrow_down_dark.svg" loading="lazy" alt="Arrow">
-          </div>
-        </div>
 
         <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            О нас
+          </li>
+
           <li class="footer_nav__list-item">
             <a href="about.html" class="not-decor-link text-dark">
               О компании
@@ -751,67 +621,203 @@
             </a>
           </li>
         </ul>
+      </nav>
+
+      <div class="footer_center-sm">
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Служба помощи
+            </p>
+
+            <div>
+              <img class="footer_arrow" src="assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Справочный раздел
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="contact.html" class="not-decor-link text-dark">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Гостям
+            </p>
+
+            <div>
+              <img class="footer_arrow" src="assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Как снять жилье
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Гарантии сервиса
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Вопросы и ответы
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Отзывы
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Хозяевам
+            </p>
+
+            <div>
+              <img class="footer_arrow" src="assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Сдать жилье
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Условия размещения
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Вопросы и ответы
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              О нас
+            </p>
+
+            <div>
+              <img class="footer_arrow" src="assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="about.html" class="not-decor-link text-dark">
+                О компании
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                СМИ о нас
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Вакансии
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Блог
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="social_network">
-      <p class="m-0 text-center text-main-gray text-nowrap text-medium with_we">
-        Будьте с нами
-      </p>
-
-      <div class="flex-items-center gap-12px">
-        <a href="#" class="not-decor-link d-block">
-          <img src="assets/images/networks/vk.svg" loading="lazy" alt="VK">
-        </a>
-
-        <a href="#" class="not-decor-link d-block">
-          <img src="assets/images/networks/tg.svg" loading="lazy" alt="Telegram">
-        </a>
-
-        <a href="#" class="not-decor-link d-block">
-          <img src="assets/images/networks/yt.svg" loading="lazy" alt="Youtube">
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer_bottom">
-    <div class="footer_bottom-top">
-      <div class="foot-top flex-items-center gap-32px-imp">
-        <a href="#" class="text-main-gray">
-          Политика обработки персональных данных
-        </a>
-
-        <a href="#" class="text-main-gray">
-          Правовая информация
-        </a>
-      </div>
-
-      <div class="foot-bottom flex-items-center gap-20px-imp">
-        <p class="text-main-gray m-0">
-          Принимаем к оплате:
+      <div class="social_network">
+        <p class="m-0 text-center text-main-gray text-nowrap text-medium with_we">
+          Будьте с нами
         </p>
 
         <div class="flex-items-center gap-12px">
-          <div>
-            <img src="assets/images/payments/visa.svg" loading="lazy" alt="Visa">
-          </div>
+          <a href="#" class="not-decor-link d-block">
+            <img src="assets/images/networks/vk.svg" alt="VK" loading="lazy">
+          </a>
 
-          <div>
-            <img src="assets/images/payments/no_know.svg" loading="lazy" alt="Icon">
-          </div>
+          <a href="#" class="not-decor-link d-block">
+            <img src="assets/images/networks/tg.svg" alt="Telegram" loading="lazy">
+          </a>
 
-          <div>
-            <img src="assets/images/payments/mir.svg" loading="lazy" alt="Mir">
-          </div>
+          <a href="#" class="not-decor-link d-block">
+            <img src="assets/images/networks/yt.svg" alt="Youtube" loading="lazy">
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="footer_bottom-bottom">
-      <p class="text-main-gray m-0">
-        © Hospitality.ru - бронирование гостиниц и квартир. Все права защищены.
-      </p>
+    <div class="footer_bottom">
+      <div class="footer_bottom-top">
+        <div class="foot-top flex-items-center gap-32px-imp">
+          <a href="#" class="text-main-gray">
+            Политика обработки персональных данных
+          </a>
+
+          <a href="#" class="text-main-gray">
+            Правовая информация
+          </a>
+        </div>
+
+        <div class="foot-bottom flex-items-center gap-20px-imp">
+          <p class="text-main-gray m-0">
+            Принимаем к оплате:
+          </p>
+
+          <div class="flex-items-center gap-12px">
+            <div>
+              <img src="assets/images/payments/visa.svg" alt="Visa" loading="lazy">
+            </div>
+
+            <div>
+              <img src="assets/images/payments/no_know.svg" alt="Icon" loading="lazy">
+            </div>
+
+            <div>
+              <img src="assets/images/payments/mir.svg" alt="Mir" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_bottom-bottom">
+        <p class="text-main-gray m-0">
+          © Hospitality.ru - бронирование гостиниц и квартир. Все права защищены.
+        </p>
+      </div>
     </div>
   </div>
 </footer>

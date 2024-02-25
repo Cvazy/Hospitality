@@ -7,6 +7,7 @@ selectors.forEach((el) => {
     const selectItems = selectorBlock.querySelectorAll('.selector_block__item')
 
     selectorInput.addEventListener('click', () => {
+        selectorInput.classList.remove('error')
         selectorArrow.classList.toggle('rotate-180')
         selectorBlock.classList.toggle('max-h-popup')
 

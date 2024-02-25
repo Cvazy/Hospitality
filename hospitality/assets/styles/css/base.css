@@ -463,11 +463,9 @@
 .h-full {
     height: 100%;
 }
-
 .h-full-imp {
     height: 100% !important;
 }
-
 .auth_block_position {
     position: relative;
     top: 50px;

@@ -6,6 +6,16 @@ const orderActionMobile = document.querySelector('.order_action_mobile')
 
 const footer = document.querySelector('footer')
 
+document.addEventListener('click', (event) => {
+    ordersActionBtn.forEach((btn) => {
+        const ordersActionList = btn.previousElementSibling
+
+        if (!ordersActionList.contains(event.target) && !btn.contains(event.target)) {
+            ordersActionList.classList.remove('max-h-icons')
+        }
+    })
+})
+
 ordersActionBtn.forEach((btn) => {
     const ordersActionList = btn.previousElementSibling
     const orderAction = ordersActionList.querySelectorAll('.order_action__item')
@@ -35,6 +45,8 @@ ordersActionBtn.forEach((btn) => {
                     }
                 })
             }
+
+            ordersActionList.classList.remove('max-h-icons')
         })
     })
 })

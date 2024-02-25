@@ -5,7 +5,8 @@ setTimeout(() => {
         const myMap = new ymaps.Map('map', {
             center: [64, 100],
             zoom: 3,
-            controls: []
+            controls: [],
+            slowDrag: true
         })
 
         const clusterer = new ymaps.Clusterer({

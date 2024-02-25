@@ -645,12 +645,9 @@ input[type="number"] {
 }
 
 .mobile_top_header {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
-  padding: 24px 10%;
+  justify-content: center;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 1250;
@@ -659,8 +656,14 @@ input[type="number"] {
     display: none;
   }
 
-  @include respondedBy(600px) {
-    padding: 16px;
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding: 24px 0;
+    max-width: 90%;
   }
 
   .mobile_header__title {
@@ -696,8 +699,13 @@ input[type="number"] {
 }
 
 .catalog_mobile_header {
+  display: flex;
+  justify-content: center;
   width: 100%;
   background: white;
+  position: fixed;
+  z-index: 1250;
+  top: 0;
 
   @include respondedTo(980px) {
     display: none;
@@ -707,10 +715,12 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 24px 32px 12px;
+    padding: 24px 0 12px;
+    max-width: 90%;
+    width: 100%;
 
     @include respondedBy(767px) {
-      padding: 16px 16px 8px;
+      padding: 16px 0 8px;
     }
 
     .mobile_header_block {
@@ -752,15 +762,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 1250;
-  padding: 0 7.5rem;
-
-  @include respondedTo(1800px) {
-    padding: 0 15rem;
-  }
-
-  @include respondedBy(1280px) {
-    padding: 0 2.5rem;
-  }
 
   @include respondedBy(980px) {
     display: none;
@@ -772,6 +773,15 @@ header {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     width: 100%;
     margin: 0;
+    max-width: 1600px;
+
+    @include respondedBy(1770px) {
+      max-width: 1400px;
+    }
+
+    @include respondedBy(1440px) {
+      max-width: 90%;
+    }
   }
 
   .header__wrapper {
@@ -781,6 +791,15 @@ header {
     gap: 1rem;
     width: 100%;
     padding: 1rem 0;
+    max-width: 1600px;
+
+    @include respondedBy(1770px) {
+      max-width: 1400px;
+    }
+
+    @include respondedBy(1440px) {
+      max-width: 90%;
+    }
 
     .header_left,
     .header_right {
@@ -890,13 +909,23 @@ header {
   }
 }
 
-.catalog__wrapper {
-  @include respondedTo(1920px) {
-    padding: 0 7.5rem;
+.bread_crumbs_paddings {
+  padding: 0 !important;
+
+  @include respondedBy(1440px) {
+    padding: 0 7.5rem !important;
   }
 
-  @include respondedTo(2200px) {
-    padding: 0 15rem;
+  @include respondedBy(1280px) {
+    padding: 0 2.5rem !important;
+  }
+
+  @include respondedBy(980px) {
+    padding: 0 10% !important;
+  }
+
+  @include respondedBy(600px) {
+    padding: 0 16px !important;
   }
 }
 
@@ -904,7 +933,7 @@ header {
   padding-top: 257px;
 
   @include respondedBy(980px) {
-    padding-top: 0;
+    padding-top: 150px;
   }
 }
 
@@ -916,25 +945,12 @@ header {
   }
 }
 
-.header_bg__main {
-  background: url("../../images/background/hero1.jpg") no-repeat;
-}
-
-.header_bg__about {
-  background: url("../../images/background/about.jpg") no-repeat;
-}
-
-.header_bg__partner {
-  background: url("../../images/background/partner.jpg") no-repeat;
-}
-
-.header_bg__404 {
-  background: url("../../images/background/404.jpg") no-repeat;
-}
-
 .header_bg {
+  display: flex;
+  justify-content: center;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   padding: 5rem 0;
   width: 100%;
 
@@ -943,11 +959,15 @@ header {
   }
 
   .under_header {
-    padding: 0 10%;
+    max-width: 1600px;
     margin-top: 7.5rem;
 
-    @include respondedBy(600px) {
-      padding: 0 16px;
+    @include respondedBy(1770px) {
+      max-width: 1400px;
+    }
+
+    @include respondedBy(1440px) {
+      max-width: 90%;
     }
 
     h1 {
@@ -1634,6 +1654,30 @@ header {
       width: 100%;
     }
   }
+
+  &__cancel_companion {
+    padding: 23px 40px;
+    text-align: center;
+    color: var(--link-hover-red);
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    border-radius: 12px;
+    background: #F1F4F8;
+
+    &:hover {
+      background: #E2E9F2;
+    }
+    @include respondedBy(1024px) {
+      width: 100%;
+    }
+
+    @include respondedBy(767px) {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 14px 0;
+    }
+  }
 }
 
 #see_more {
@@ -1954,6 +1998,9 @@ header {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #F1F4F8;
   overflow-x: hidden;
 
@@ -2014,18 +2061,14 @@ main {
 
     &_block {
       width: 100%;
-      padding: 0 7.5rem 0;
+      max-width: 1600px;
 
-      @include respondedTo(1800px) {
-        padding: 0 15rem 0;
+      @include respondedBy(1770px) {
+        max-width: 1400px;
       }
 
-      @include respondedBy(1280px) {
-        padding: 0 2.5rem 0;
-      }
-
-      @include respondedBy(767px) {
-        padding: 0 2rem 0;
+      @include respondedBy(1440px) {
+        max-width: 90%;
       }
 
       .travels {
@@ -2272,19 +2315,6 @@ main {
 
     .account_form_block {
       width: 100%;
-      padding: 0 7.5rem 0;
-
-      @include respondedTo(1800px) {
-        padding: 0 15rem 0;
-      }
-
-      @include respondedBy(1280px) {
-        padding: 0 2.5rem 0;
-      }
-
-      @include respondedBy(767px) {
-        padding: 0;
-      }
 
       .account_previous {
         display: flex;
@@ -2312,7 +2342,7 @@ main {
         @include respondedBy(767px) {
           gap: 16px;
           margin-bottom: 32px;
-          padding: 16px 16px 0;
+          padding: 16px 0 0;
         }
 
         .success_block {
@@ -2471,6 +2501,8 @@ main {
           background: white;
           max-width: calc(25% - 24px);
           width: 100%;
+          position: sticky;
+          top: 150px;
 
           @include respondedBy(1280px) {
             max-width: calc(25% - 12px);
@@ -2750,6 +2782,18 @@ main {
                         max-width: 100%;
                       }
                     }
+                  }
+                }
+
+                .add_companion_btns {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 16px;
+                  width: 100%;
+
+                  @include respondedBy(1024px) {
+                    flex-direction: column;
                   }
                 }
               }
@@ -3258,7 +3302,7 @@ main {
                 flex-direction: row;
                 width: 100%;
 
-                @include respondedBy(1280px) {
+                @include respondedBy(1440px) {
                   flex-direction: column;
                 }
 
@@ -3267,7 +3311,7 @@ main {
                     width: auto;
                     height: 100%;
 
-                    @include respondedBy(1280px) {
+                    @include respondedBy(1440px) {
                       width: 100%;
                     }
                   }
@@ -3284,7 +3328,7 @@ main {
               width: 100%;
               position: relative;
 
-              @include respondedBy(1280px) {
+              @include respondedBy(1440px) {
                 align-items: flex-end;
                 padding: 20px;
               }
@@ -3300,7 +3344,7 @@ main {
                 justify-content: space-between;
                 gap: 16px;
 
-                @include respondedBy(1280px) {
+                @include respondedBy(1440px) {
                   width: 100%;
                 }
               }
@@ -3353,6 +3397,8 @@ main {
           gap: 12px;
           max-width: calc(25% - 24px);
           width: 100%;
+          position: sticky;
+          top: 150px;
 
           @include respondedBy(1280px) {
             max-width: calc(25% - 12px);
@@ -4466,14 +4512,14 @@ main {
     flex-direction: column;
     gap: 32px;
     width: 100%;
-    padding: 32px 40px 128px;
+    padding: 32px 0 128px;
 
     @include respondedBy(1024px) {
-      padding: 32px 28px 100px;
+      padding: 32px 0 100px;
     }
 
     @include respondedBy(767px) {
-      padding: 32px 16px 80px;
+      padding: 32px 0 80px;
     }
 
     &__main {
@@ -4614,7 +4660,7 @@ main {
       gap: 20px;
       width: 100%;
 
-      @include respondedBy(1380px) {
+      @include respondedBy(1600px) {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -4783,28 +4829,14 @@ main {
       padding-bottom: 80px;
     }
 
-    @include respondedTo(1600px) {
-      padding: 0 5rem 128px;
-    }
-
-    @include respondedTo(1920px) {
-      padding: 0 10rem 128px;
-    }
-
-    @include respondedTo(2200px) {
-      padding: 0 15rem 128px;
-    }
-
     .main_block {
       @include respondedBy(1440px) {
         .hotel__top-left {
           max-width: 100%;
-          padding-left: 0;
         }
 
         .hotel__top-right {
           max-width: 100%;
-          padding-right: 0;
         }
       }
     }
@@ -4818,7 +4850,6 @@ main {
 
       @include respondedBy(1280px) {
         flex-direction: column;
-        padding: 0 2.25rem;
       }
 
       &-left {
@@ -4826,12 +4857,10 @@ main {
         flex-direction: column;
         gap: 48px;
         max-width: 65%;
-        padding-left: 2.25rem;
         width: 100%;
 
         @include respondedBy(1280px) {
           max-width: 100%;
-          padding-left: 0;
         }
 
         @include respondedBy(980px) {
@@ -5647,7 +5676,6 @@ main {
       &-right {
         max-width: 35%;
         width: 100%;
-        padding-right: 2.25rem;
         align-self: normal;
         height: fit-content;
         position: sticky;
@@ -5655,7 +5683,6 @@ main {
 
         @include respondedBy(1280px) {
           max-width: 100%;
-          padding-right: 0;
         }
 
         .hotel_rating {
@@ -5816,7 +5843,6 @@ main {
       flex-direction: column;
       gap: 20px;
       width: 100%;
-      padding: 0 2.25rem;
 
       .similar {
         display: flex;
@@ -5906,52 +5932,62 @@ main {
     }
 
     .nav_sticky {
+      display: flex;
       position: sticky;
-      top: 136.3px;
+      top: 134.3px;
       z-index: 500;
+      transition-property: none;
 
       @include respondedBy(980px) {
         top: 85px;
-      }
-
-      @include respondedBy(600px) {
-        top: 70px;
       }
     }
 
     .nav_sticky_wrap {
       background: white;
-      padding: 24px 40px;
+      padding: 24px 0;
       width: 100vw;
 
-      @include respondedBy(980px) {
-        padding: 0 8% 24px;
+      @include respondedBy(767px) {
+        padding: 16px 0;
       }
 
-      @include respondedBy(800px) {
-        padding: 0 8%;
-      }
+      .hotel_info_nav {
+        align-self: center;
+        max-width: 1600px;
 
-      @include respondedBy(600px) {
-        padding: 0;
-      }
+        @include respondedBy(1770px) {
+          max-width: 1400px;
+        }
 
-      @include respondedTo(1600px) {
-        padding: 24px 8rem;
-      }
+        @include respondedBy(1440px) {
+          max-width: 90%;
+        }
 
-      @include respondedTo(1920px) {
-        padding: 24px 13rem;
-      }
-
-      @include respondedTo(2200px) {
-        padding: 24px 18rem;
+        @include respondedBy(800px) {
+          padding: 0;
+        }
       }
     }
 
     .hotel_info_nav {
       width: 100%;
       overflow-x: scroll;
+      max-width: 1600px;
+      align-self: center;
+
+      @include respondedBy(1770px) {
+        max-width: 1400px;
+      }
+
+      @include respondedBy(1440px) {
+        max-width: 90%;
+        align-self: auto;
+      }
+
+      @include respondedBy(980px) {
+        max-width: 100%;
+      }
 
       &::-webkit-scrollbar {
         height: 1px;
@@ -6146,15 +6182,7 @@ main {
     align-items: center;
     width: 100%;
     gap: 48px;
-    padding: 0 7.5rem 128px;
-
-    @include respondedTo(1800px) {
-      padding: 0 15rem 128px;
-    }
-
-    @include respondedBy(1440px) {
-      padding: 0 0 128px;
-    }
+    padding: 0 0 128px;
 
     @include respondedBy(1280px) {
       padding: 0 0 100px;
@@ -6166,19 +6194,6 @@ main {
       align-items: flex-start;
       gap: 24px;
       width: 100%;
-      padding: 0 40px;
-
-      @include respondedBy(1280px) {
-        padding: 0 32px;
-      }
-
-      @include respondedBy(980px) {
-        padding: 0 24px;
-      }
-
-      @include respondedBy(767px) {
-        padding: 0 16px;
-      }
 
       .blog_search {
         display: flex;
@@ -6254,14 +6269,12 @@ main {
         display: flex;
         gap: 20px;
         width: 100%;
-        padding: 0 40px;
 
         @include respondedBy(1440px) {
           flex-direction: column;
         }
 
         @include respondedBy(767px) {
-          padding: 0;
           gap: 16px;
         }
 
@@ -6395,15 +6408,10 @@ main {
         flex-direction: column;
         align-items: center;
         gap: 48px;
-        padding: 0 40px;
         width: 100%;
 
         @include respondedBy(1280px) {
           gap: 32px;
-        }
-
-        @include respondedBy(767px) {
-          padding: 0 16px;
         }
 
         &__cards {
@@ -6469,28 +6477,15 @@ main {
     flex-direction: column;
     gap: 128px;
     width: 100%;
-    padding: 0 15rem 128px;
-
-    @include respondedBy(1800px) {
-      padding: 0 7.5rem 128px;
-    }
-
-    @include respondedBy(1440px) {
-      padding: 0 40px 128px;
-    }
+    padding-bottom: 128px;
 
     @include respondedBy(1280px) {
       gap: 100px;
-      padding: 0 32px 100px;
-    }
-
-    @include respondedBy(980px) {
-      gap: 80px;
-      padding: 0 24px 100px;
+      padding-bottom: 100px;
     }
 
     @include respondedBy(767px) {
-      padding: 0 16px 80px;
+      padding-bottom: 80px;
     }
 
     .blog_details {
@@ -7146,24 +7141,16 @@ main {
     align-items: center;
     width: 100%;
     gap: 128px;
-    padding: 0 7.5rem 128px;
-
-    @include respondedTo(1800px) {
-      padding: 0 15rem 128px;
-    }
-
-    @include respondedBy(1440px) {
-      padding: 0 0 128px;
-    }
+    padding-bottom: 128px;
 
     @include respondedBy(1280px) {
-      padding: 0 0 100px;
       gap: 100px;
+      padding-bottom: 100px;
     }
 
     @include respondedBy(980px) {
       gap: 80px;
-      padding: 0 0 80px;
+      padding-bottom: 80px;
     }
 
     &__head {
@@ -7172,19 +7159,6 @@ main {
       align-items: flex-start;
       gap: 16px;
       width: 100%;
-      padding: 0 40px;
-
-      @include respondedBy(1280px) {
-        padding: 0 32px;
-      }
-
-      @include respondedBy(980px) {
-        padding: 0 24px;
-      }
-
-      @include respondedBy(767px) {
-        padding: 0 16px;
-      }
 
       .contact_text {
         display: flex;
@@ -7355,21 +7329,17 @@ main {
     align-items: flex-start;
     width: 100%;
     gap: 48px;
-    padding: 0 40px;
 
     @include respondedBy(1280px) {
       gap: 40px;
-      padding: 0 32px;
     }
 
     @include respondedBy(980px) {
       gap: 36px;
-      padding: 0 24px;
     }
 
     @include respondedBy(767px) {
       gap: 32px;
-      padding: 0 16px;
     }
 
     .contact_peoples_wrap {
@@ -7589,29 +7559,24 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 48px;
-    max-width: 80%;
     width: 100%;
-    padding: 5rem 0 7rem 7.5rem;
+    padding: 5rem 0 7rem;
+    max-width: 1600px;
 
-    @include respondedTo(1800px) {
-      padding: 5rem 0 7rem 15rem;
+    @include respondedBy(1770px) {
+      max-width: 1400px;
+    }
+
+    @include respondedBy(1440px) {
+      max-width: 90%;
     }
 
     @include respondedBy(1280px) {
-      max-width: 100%;
-      padding: 5rem 2.5rem 4rem;
-    }
-
-    @include respondedBy(980px) {
-      padding: 5rem 10% 4rem;
+      padding: 5rem 0 4rem;
     }
 
     @include respondedBy(767px) {
       gap: 32px;
-    }
-
-    @include respondedBy(600px) {
-      padding: 5rem 16px 4rem;
     }
 
     &__title {
@@ -7696,99 +7661,105 @@ main {
     }
 
     &__wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
+      width: 100%;
+      overflow: scroll;
 
-      @include respondedBy(980px) {
-        flex-direction: row;
-        gap: 16px;
+      &::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
       }
     }
 
-    &__points {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      position: relative;
+    .broken_line {
+      border-top: 2px dashed rgba(3, 125, 177, 0.3);
+      position: absolute;
+      top: 20px;
+      z-index: 5;
+      left: 0;
+      right: 0;
+
+      @include respondedBy(1440px) {
+        top: 18px;
+      }
+
+      @include respondedBy(1280px) {
+        top: 16px;
+      }
 
       @include respondedBy(980px) {
-        grid-template-columns: repeat(1, 1fr);
+        top: 0;
+        left: 12px;
+        bottom: 0;
+        right: unset;
+        border-left: 2px dashed rgba(3, 125, 177, 0.3);
+        border-top: none;
       }
 
-      .broken_line {
-        border-top: 2px dashed rgba(3, 125, 177, 0.3);
-        width: 100vw;
-        position: absolute;
-        top: 50%;
-        z-index: 5;
+      @include respondedBy(767px) {
+        left: 10px;
+      }
+    }
 
-        @include respondedBy(980px) {
-          height: 78%;
-          width: 2px;
-          top: initial;
-          right: 50%;
-          border-right: 2px dashed rgba(3, 125, 177, 0.3);
-        }
+    .how_start_stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--main-bg-color);
+      position: relative;
+      z-index: 10;
+
+      @include respondedBy(1440px) {
+        width: 36px;
+        height: 36px;
       }
 
-      .how_start_stage {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
+      @include respondedBy(1280px) {
+        width: 32px;
+        height: 32px;
+      }
+
+      @include respondedBy(980px) {
+        width: 28px;
+        height: 28px;
+      }
+
+      @include respondedBy(767px) {
+        width: 22px;
+        height: 22px;
+      }
+
+      &__white {
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
-        background: var(--main-bg-color);
-        position: relative;
-        z-index: 10;
-
-        @include respondedBy(1440px) {
-          width: 36px;
-          height: 36px;
-        }
+        background: white;
 
         @include respondedBy(1280px) {
-          width: 32px;
-          height: 32px;
-        }
-
-        @include respondedBy(980px) {
-          width: 28px;
-          height: 28px;
+          width: 14px;
+          height: 14px;
         }
 
         @include respondedBy(767px) {
-          width: 22px;
-          height: 22px;
-        }
-
-        &__white {
-          width: 16px;
-          height: 16px;
-          border-radius: 50%;
-          background: white;
-
-          @include respondedBy(1280px) {
-            width: 14px;
-            height: 14px;
-          }
-
-          @include respondedBy(767px) {
-            width: 11px;
-            height: 11px;
-          }
+          width: 11px;
+          height: 11px;
         }
       }
     }
 
     &__list {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      align-items: center;
+      width: fit-content;
       gap: 20px;
+      position: relative;
+      flex-wrap: nowrap;
 
       @include respondedBy(980px) {
-        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       @include respondedBy(767px) {
@@ -7797,16 +7768,45 @@ main {
     }
 
     &__item {
-      background: white;
-      border-radius: 20px;
-      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      min-width: 25vw;
+      width: 100%;
+
+      @include respondedBy(1440px) {
+        gap: 28px;
+      }
 
       @include respondedBy(1280px) {
-        min-height: 320px;
+        gap: 24px;
       }
 
       @include respondedBy(980px) {
-        min-height: 155px;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+        min-width: unset;
+      }
+
+      @include respondedBy(767px) {
+        gap: 16px;
+      }
+
+      &-card {
+        background: white;
+        border-radius: 20px;
+        min-height: 420px;
+        width: 100%;
+
+        @include respondedBy(1280px) {
+          min-height: 320px;
+        }
+
+        @include respondedBy(980px) {
+          min-height: 155px;
+        }
       }
 
       &-wrap {
@@ -7816,9 +7816,14 @@ main {
         justify-content: space-between;
         padding: 32px;
         height: 100%;
+        min-height: 420px;
+
+        @include respondedBy(1280px) {
+          min-height: 320px;
+        }
 
         @include respondedBy(980px) {
-          position: relative;
+          min-height: 155px;
         }
 
         .how_start_text {
@@ -7892,35 +7897,14 @@ main {
     &__map {
       width: 100%;
       height: 70vh;
-      margin-top: 48px;
       position: relative;
 
-      @include respondedBy(1280px) {
-        margin-top: 42px;
-      }
-
-      @include respondedBy(980px) {
-        margin-top: 36px;
-      }
-
       @include respondedBy(767px) {
-        margin-top: 32px;
         height: 50vh;
       }
 
       @include respondedBy(480px) {
         height: 40vh;
-      }
-
-      iframe {
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-        filter: grayscale(100%);
-
-        @include respondedBy(767px) {
-          border-radius: 16px;
-        }
       }
     }
 
@@ -8852,36 +8836,6 @@ main {
   }
 }
 
-.small_main_px {
-  padding-left: 15rem !important;
-  padding-right: 15rem !important;
-
-  @include respondedBy(2100px) {
-    padding-left: 7.5rem !important;
-    padding-right: 7.5rem !important;
-  }
-
-  @include respondedBy(1700px) {
-    padding-left: 4rem !important;
-    padding-right: 4rem !important;
-  }
-
-  @include respondedBy(1600px) {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  }
-
-  @include respondedBy(1024px) {
-    padding-left: 28px !important;
-    padding-right: 28px !important;
-  }
-
-  @include respondedBy(767px) {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-}
-
 .order_action {
   border-radius: 12px;
   background: white;
@@ -9606,7 +9560,6 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 0 40px;
 
   @include respondedBy(1280px) {
     grid-template-columns: repeat(2, 1fr);
@@ -9614,10 +9567,6 @@ main {
 
   @include respondedBy(850px) {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  @include respondedBy(767px) {
-    padding: 0 16px;
   }
 
   &__item {
@@ -9887,7 +9836,6 @@ main {
 .bread_crumbs {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 12px;
   gap: 8px;
   width: 100%;
   overflow: scroll;
@@ -9939,16 +9887,13 @@ main {
 @include respondedBy(1440px) {
   .main_block {
     flex-direction: column;
-    padding: 0 2.25rem;
 
     .hotel__top-left {
       max-width: 100%;
-      padding-left: 0;
     }
 
     .hotel__top-right {
       max-width: 100%;
-      padding-right: 0;
     }
   }
 }
@@ -10294,9 +10239,11 @@ main {
   }
 }
 
-@include respondedBy(980px) {
-  .desctop_filter {
-    display: none;
+.desctop_filter {
+  width: 100%;
+
+  @include respondedBy(980px) {
+    display: none !important;
   }
 }
 
@@ -10320,7 +10267,6 @@ main {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
   background: white;
   max-height: 0;
   overflow: hidden;
@@ -10330,6 +10276,8 @@ main {
 }
 
 .filters_full {
+  display: flex;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -10350,16 +10298,21 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    width: 100%;
     height: 100%;
-    padding: 32px 40px;
+    padding: 32px 0;
+    width: 100%;
+    max-width: 1600px;
 
-    @include respondedBy(980px) {
-      padding: 0 10%;
+    @include respondedBy(1770px) {
+      max-width: 1400px;
     }
 
-    @include respondedBy(600px) {
-      padding: 0 16px;
+    @include respondedBy(1440px) {
+      max-width: 90%;
+    }
+
+    @include respondedBy(980px) {
+      padding: 16px 0;
     }
 
     .filters_full__params {
@@ -10368,10 +10321,14 @@ main {
       row-gap: 32px;
       column-gap: 84px;
 
-      @include respondedBy(980px) {
-        grid-template-columns: repeat(2, 1fr);
+      @include respondedBy(1440px) {
+        grid-template-columns: repeat(3, 1fr);
         row-gap: 26px;
         column-gap: 56px;
+      }
+
+      @include respondedBy(980px) {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       @include respondedBy(767px) {
@@ -10501,26 +10458,44 @@ main {
 
 footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  width: 100%;
-  background: white;
-  font-size: 14px;
-  line-height: 18px;
-  padding: 48px 7.5rem;
+  justify-content: center;
+  padding: 48px 0;
 
-  @include respondedTo(1800px) {
-    padding: 48px 15rem;
-  }
-
-  @include respondedBy(1280px) {
-    padding: 48px 2.5rem;
-  }
+  //
+  //@include respondedTo(1800px) {
+  //  padding: 48px 15rem;
+  //}
+  //
+  //@include respondedBy(1280px) {
+  //  padding: 48px 2.5rem;
+  //}
 
   @include respondedBy(767px) {
-    padding: 32px 2rem;
-    gap: 32px;
+    padding: 32px 0;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    background: white;
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 1600px;
+
+    @include respondedBy(1770px) {
+      max-width: 1400px;
+    }
+
+    @include respondedBy(1440px) {
+      max-width: 90%;
+    }
+
+    @include respondedBy(767px) {
+      gap: 32px;
+    }
   }
 
   .footer_bottom {
@@ -10716,10 +10691,6 @@ input[readonly] {
   .md-w-full {
     width: 100%;
   }
-}
-
-.dark {
-  color: var(--dark-col);
 }
 
 .base-text {
