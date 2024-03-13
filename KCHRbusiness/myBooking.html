@@ -7,16 +7,32 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible"
         content="ie=edge">
-  <meta name="description" content="Page Account">
+  <meta name="description" content="Page Account Orders">
   <link rel="stylesheet" href="assets/styles/css/style.css">
   <link rel="stylesheet" href="assets/styles/css/base.css">
   <link rel="icon" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <title>KCHRbusiness - Личный кабинет</title>
+  <title>KCHRbusiness - Мои бронирования</title>
 </head>
 <body>
+
+<div class="order_action object_action order_action_mobile">
+  <div class="order_action__wrapper">
+    <div class="order_action__title">
+      <p>
+        Действия с заказом
+      </p>
+
+      <img id="closeMobileAction" src="assets/images/icons/close-square-dark.svg" alt="Icon" loading="lazy">
+    </div>
+
+    <div class="order_action__item order_delete cancel_order">
+      Отменить заказ
+    </div>
+  </div>
+</div>
 
 <div class="mobile" data-mobail-block="navigation">
   <div class="mobile__menu">
@@ -239,6 +255,13 @@
             <a href="accountOrders.html" class="not-decor-link mb-nav_text flex-items-center gap-8px">
               <img width="24" class="d-block" src="assets/images/account/history.svg" alt="Icon">
               История заказов
+            </a>
+          </li>
+
+          <li>
+            <a href="myBooking.html" class="not-decor-link mb-nav_text flex-items-center gap-8px">
+              <img width="24" class="d-block" src="assets/images/account/radar.svg" alt="Icon">
+              Мои бронирования
             </a>
           </li>
         </ul>
@@ -577,8 +600,8 @@
 
             <img class="d-block" src="assets/images/icons/arrow_right_dark.svg" loading="lazy" alt="Arrow">
 
-            <a href="myAccount.html" class="bread_crumbs__item">
-              Личный кабинет
+            <a href="accountFavourites.html" class="bread_crumbs__item">
+              Мои бронирования
             </a>
           </div>
 
@@ -591,7 +614,7 @@
           <div class="account__menu">
             <div class="account__menu-wrap">
               <a href="myAccount.html"
-                 class="not-decor-link account_menu_item account_menu_active">
+                 class="not-decor-link account_menu_item">
                 <svg class="d-block"
                      width="26"
                      height="26"
@@ -702,7 +725,7 @@
                 История заказов
               </a>
 
-              <a href="myBooking.html" class="not-decor-link account_menu_item">
+              <a href="myBooking.html" class="not-decor-link account_menu_item account_menu_active">
                 <svg width="26"
                      height="26"
                      viewBox="0 0 24 24"
@@ -722,106 +745,213 @@
           </div>
 
           <div class="account__main">
-            <div class="account__main-top">
-              <div class="lk_form">
+            <div class="my_orders">
+              <div class="lk_form p-0-imp w-full">
                 <div class="lk_form__title">
                   <h3>
-                    Личные данные
+                    Мои бронирования
                   </h3>
-
-                  <p class="m-0 lg-text text-dark">
-                    Эта информация не будет доступна публично. Она будет использована только для автозаполнения ваших данных и поможет вам совершать бронирования быстрее.
-                  </p>
                 </div>
+              </div>
 
-                <form method="post" action="#" class="lk_form__content main_form">
-                  <div class="load_photo">
-                    <div class="w-full flex-items-center gap-20px-imp">
-                      <div class="load_photo__circle">АШ</div>
+              <div class="my_orders__list">
+                <div class="catalog_item w-full" data-item-id="1">
+                  <div class="catalog_item__wrapper my_orders__item">
+                    <div class="catalog_top my_orders__item-top">
+                      <div class="catalog_image order_img">
+                        <img class="br-12px" src="assets/images/catalog/catalog1.jpg" alt="Image" loading="lazy">
 
-                      <div class="flex-col gap-12px justify-between flex-grow">
-                        <label for="avatar-upload" class="btn btn__loading_photo">
-                          Загрузить фото
-                        </label>
-                        <input class="d-none-imp" id="avatar-upload" name="profile_photo" type="file"/>
+                        <button data-btn-id="1" type="button" class="btn like heart">
+                          <img class="no_like" src="assets/images/icons/heart.svg" alt="Like" loading="lazy">
 
-                        <button type="button" class="btn btn__delete_photo">
-                          <img class="d-block" src="assets/images/account/trash.svg" alt="Icon" loading="lazy">
-                          Удалить фото
+                          <img class="d-none-imp click_like" src="assets/images/icons/heart_click.svg" alt="Like">
                         </button>
                       </div>
-                    </div>
 
-                    <p class="m-0 xs-text text-main-gray">
-                      Рекомендованный размер изображения: 256 на 256 пикселей
-                    </p>
-                  </div>
+                      <div class="my_orders__info">
+                        <div class="my_orders__info-wrap">
+                          <div class="flex-col flex-items-start gap-8px">
+                            <p class="m-0 sm-text text-main-col order_status">
+                              14.03.2023 (оформлен)
+                            </p>
 
-                  <div class="lk_form_inputs">
-                    <div class="lk_input">
-                      <input type="text" placeholder="Имя" name="profile_firstname" oninput="validateTextInput(event)">
-                    </div>
+                            <div class="flex-col flex-items-start gap-4px">
+                              <a href="excursionPage.html" target="_blank" class="not-decor-link xl-text text-dark text-medium">
+                                Стандартная экскурсия по городу на 2 человека
+                              </a>
 
-                    <div class="lk_input">
-                      <input type="text" placeholder="Фамилия" name="profile_lastname" oninput="validateTextInput(event)">
-                    </div>
+                              <p class="m-0 sm-text text-dark">
+                                Дата посещения: 20.03.22
+                              </p>
 
-                    <div class="lk_input">
-                      <input type="text" placeholder="Дата рождения (01.01.1986)" name="profile_birthday" oninput="applyDateFormat(this)">
-                    </div>
+                              <div class="flex-items-center gap-8px">
+                                <img class="d-block" src="assets/images/icons/location_dark.svg" alt="Icon" loading="lazy">
 
-                    <div class="lk_input">
-                      <div class="selector">
-                        <input type="text" placeholder="Гражданство" name="profile_nationality" readonly>
+                                <p class="m-0 sm-text text-dark">
+                                  Москва
+                                </p>
+                              </div>
+                            </div>
+                          </div>
 
-                        <img class="lk_input__icon selector_arrow" src="assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+                          <div class="flex-col flex-items-start">
+                            <p class="m-0 xl-text text-dark text-medium">
+                              10 000 ₽
+                            </p>
 
-                        <div class="selector_block">
-                          <ul class="selector_block__list">
-                            <li class="selector_block__item">
-                              Российская Федерация
-                            </li>
+                            <p class="m-0 sm-text text-main-gray">
+                              за 1 человека
+                            </p>
+                          </div>
+                        </div>
 
-                            <li class="selector_block__item">
-                              Украина
-                            </li>
+                        <div class="order_action">
+                          <div class="order_action__wrapper">
+                            <div data-order-id="1" class="order_action__item order_delete cancel_order">
+                              Отменить заказ
+                            </div>
+                          </div>
+                        </div>
 
-                            <li class="selector_block__item">
-                              Республика Беларусь
-                            </li>
-                          </ul>
+                        <div class="my_orders__info-btn"  data-order-mobile="1">
+                          <img src="assets/images/icons/more.svg" alt="Icon" loading="lazy">
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  <div class="lk_form_radio">
-                    <div class="lk_form_radio__wrapper">
-                      <input class="custom-radio" name="man" type="radio" id="radio_man" checked>
-                      <label for="radio_man" class="lg-text radio_active">Мужской</label>
-                    </div>
+                <div class="catalog_item w-full" data-item-id="2">
+                  <div class="catalog_item__wrapper my_orders__item">
+                    <div class="catalog_top my_orders__item-top">
+                      <div class="catalog_image order_img">
+                        <img class="br-12px" src="assets/images/catalog/catalog2.jpg" alt="Image" loading="lazy">
 
-                    <div class="lk_form_radio__wrapper">
-                      <input class="custom-radio" name="man" type="radio" id="radio_woman">
-                      <label for="radio_woman" class="lg-text">Женский</label>
+                        <button data-btn-id="2" type="button" class="btn like heart">
+                          <img class="no_like" src="assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                          <img class="d-none-imp click_like" src="assets/images/icons/heart_click.svg" alt="Like">
+                        </button>
+                      </div>
+
+                      <div class="my_orders__info">
+                        <div class="my_orders__info-wrap">
+                          <div class="flex-col flex-items-start gap-8px">
+                            <p class="m-0 sm-text text-main-col order_status">
+                              14.03.2023 (оформлен)
+                            </p>
+
+                            <div class="flex-col flex-items-start gap-4px">
+                              <a href="excursionPage.html" target="_blank" class="not-decor-link xl-text text-dark text-medium">
+                                Стандартная экскурсия по городу на 3 человека
+                              </a>
+
+                              <p class="m-0 sm-text text-dark">
+                                Дата посещения: 23.03.22
+                              </p>
+
+                              <div class="flex-items-center gap-8px">
+                                <img class="d-block" src="assets/images/icons/location_dark.svg" alt="Icon" loading="lazy">
+
+                                <p class="m-0 sm-text text-dark">
+                                  Москва
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex-col flex-items-start">
+                            <p class="m-0 xl-text text-dark text-medium">
+                              10 000 ₽
+                            </p>
+
+                            <p class="m-0 sm-text text-main-gray">
+                              за 2 человека
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="order_action">
+                          <div class="order_action__wrapper">
+                            <div data-order-id="2" class="order_action__item order_delete cancel_order">
+                              Отменить заказ
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="my_orders__info-btn" data-order-mobile="2">
+                          <img src="assets/images/icons/more.svg" alt="Icon" loading="lazy">
+                        </div>
+                      </div>
                     </div>
                   </div>
+                </div>
 
-                  <div class="lk_form_inputs">
-                    <div class="lk_input">
-                      <input type="tel" placeholder="Телефон" name="profile_phone" class="phone_number" minlength="17" maxlength="17">
-                    </div>
+                <div class="catalog_item w-full" data-item-id="3">
+                  <div class="catalog_item__wrapper my_orders__item">
+                    <div class="catalog_top my_orders__item-top">
+                      <div class="catalog_image order_img">
+                        <img class="br-12px" src="assets/images/catalog/catalog3.jpg" alt="Image" loading="lazy">
 
-                    <div class="lk_input">
-                      <input type="email" placeholder="Email" name="profile_email">
-                      <div class="errorHold"></div>
+                        <button data-btn-id="3" type="button" class="btn like heart">
+                          <img class="no_like" src="assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                          <img class="d-none-imp click_like" src="assets/images/icons/heart_click.svg" alt="Like">
+                        </button>
+                      </div>
+
+                      <div class="my_orders__info">
+                        <div class="my_orders__info-wrap">
+                          <div class="flex-col flex-items-start gap-8px">
+                            <p class="m-0 sm-text text-main-col order_status">
+                              14.03.2023 (оформлен)
+                            </p>
+
+                            <div class="flex-col flex-items-start gap-4px">
+                              <a href="excursionPage.html" target="_blank" class="not-decor-link xl-text text-dark text-medium">
+                                Стандартная экскурсия по городу на 1 человека
+                              </a>
+
+                              <p class="m-0 sm-text text-dark">
+                                Дата посещения: 27.03.22
+                              </p>
+
+                              <div class="flex-items-center gap-8px">
+                                <img class="d-block" src="assets/images/icons/location_dark.svg" alt="Icon" loading="lazy">
+
+                                <p class="m-0 sm-text text-dark">
+                                  Москва
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="flex-col flex-items-start">
+                            <p class="m-0 xl-text text-dark text-medium">
+                              10 000 ₽
+                            </p>
+
+                            <p class="m-0 sm-text text-main-gray">
+                              за 3 человека
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="order_action">
+                          <div class="order_action__wrapper">
+                            <div data-order-id="3" class="order_action__item order_delete cancel_order">
+                              Отменить заказ
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="my_orders__info-btn" data-order-mobile="3">
+                          <img src="assets/images/icons/more.svg" alt="Icon" loading="lazy">
+                        </div>
+                      </div>
                     </div>
                   </div>
-
-                  <button type="submit" class="btn blue_btn">
-                    Сохранить
-                  </button>
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -1125,28 +1255,18 @@
 
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=viewport-units"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/viewport-units-buggyfill/0.6.2/viewport-units-buggyfill.js"></script>
-
 <script>
     window.onload = function() {
         window.viewportUnitsBuggyfill.init();
     };
 </script>
 
-<script src="https://unpkg.com/libphonenumber-js/bundle/libphonenumber-js.min.js"></script>
-
 <script src="assets/scripts/dropMenu.js"></script>
 <script src="assets/scripts/mobileHeader.js"></script>
-<script src="assets/scripts/inputText.js"></script>
-<script src="assets/scripts/inputNumber.js"></script>
 <script src="assets/scripts/account/accountHead.js"></script>
-<script src="assets/scripts/account/birthdayFormated.js"></script>
-<script src="assets/scripts/account/selector.js"></script>
-<script src="assets/scripts/account/phoneFormatted.js"></script>
-<script src="assets/scripts/account/closeSelectorBlocks.js"></script>
-<script src="assets/scripts/account/lkRadio.js"></script>
-<script src="assets/scripts/account/lkValidator.js"></script>
-<script src="assets/scripts/account/emailValidator.js"></script>
+<script src="assets/scripts/account/bookingAction.js"></script>
 <script src="assets/scripts/closePopUpClick.js"></script>
+<script src="assets/scripts/clickLike.js"></script>
 <script src="assets/scripts/footerNavigation.js"></script>
 <script src="assets/scripts/addFunctionAttributes.js"></script>
 </body>
