@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex" />
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <meta name="description" content="Page Account">
+  <link rel="stylesheet" href="../public/assets/styles/css/style.css">
+  <link rel="stylesheet" href="../public/assets/styles/css/base.css">
+  <link rel="icon" href="../public/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>HotelExpert - Личный кабинет</title>
+</head>
+<body>
+
+<div class="mobile" data-mobail-block="navigation">
+  <div class="mobile__menu">
+    <div class="mobile__menu-top relative">
+      <div class="mobile_header">
+        <div class="mobile_header__logo">
+          <a href="../index.html">
+            <img src="../public/assets/images/logotypes/mobile-dark-logo.svg"
+                 alt="Dark Logotype">
+          </a>
+        </div>
+
+        <div class="mobile_header__menu">
+          <button type="button"
+                  class="mb_action back_arrow">
+            <img src="../public/assets/images/icons/arrow-left.svg"
+                 alt="Back">
+          </button>
+
+          <button type="button"
+                  class="mb_action navClose">
+            <img src="../public/assets/images/icons/mobile-close.svg"
+                 alt="Close">
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile_nav_wrapper">
+        <ul class="mobile_nav">
+          <li onclick="mobileReviewMenu()">
+            <div class="mobile_nav__drop">
+              <div class="mobile_nav__item">
+                <p class="m-0 mb-nav_text">
+                  Отзывы
+                </p>
+
+                <div>
+                  <img class="mobile_nav__item_arrow"
+                       src="../public/assets/images/icons/arrow_down_dark.svg"
+                       alt="Arrow">
+                </div>
+              </div>
+
+              <div class="mobile_nav__drop-list">
+                <a href="catalogHotel.html">
+                  Отели
+                </a>
+
+                <a href="catalogExcursion.html">
+                  Впечатления
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="blog.html"
+               class="not-decor-link mb-nav_text">
+              Блог
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html"
+               class="not-decor-link mb-nav_text">
+              О компании
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html"
+               class="not-decor-link mb-nav_text">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mobile__menu-bottom">
+      <div class="w-full">
+        <p class="text-dark-grey m-0">
+          Самое важное про текущую ситуацию:
+          <br>
+          <span class="border-underline-dark mt-4px">
+              <a href="#"
+                 class="text-dark text-medium not-decor-link">
+                сводка,
+              </a>
+
+              <a href="#"
+                 class="text-dark text-medium not-decor-link">
+                телеграм-канал
+              </a>
+          </span>
+        </p>
+      </div>
+
+      <div class="w-full">
+        <p class="text-dark-grey m-0">
+          Пн-Пт с 9:00 до 19:00
+          <br>
+
+        <div class="mt-12px">
+          <a class="text-dark not-decor-link text-medium"
+             href="tel:+78822345300">
+            +7(882) 23-45-300
+          </a>
+        </div>
+        </p>
+      </div>
+
+      <a href="../dist/pages/reviewAdd.html"
+         class="d-block w-full btn btn__mobile not-decor-link">
+        Написать отзыв
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="mobile" data-mobail-block="account">
+  <div class="mobile__menu">
+    <div class="mobile__menu-top gap-1">
+      <div class="mobile_header">
+        <div class="mobile_header__logo">
+          <p class="mobile_header__title">
+            Профиль
+          </p>
+        </div>
+
+        <div class="mobile_header__menu">
+          <button type="button" class="mb_action navClose">
+            <img src="../public/assets/images/icons/mobile-close.svg" alt="Close">
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile_nav_wrapper">
+        <ul class="mobile_nav">
+          <li>
+            <a href="myAccount.html" class="not-decor-link mb-nav_text flex-items-center gap-8px">
+              <img width="24" class="d-block" src="../public/assets/images/icons/profile_dark.svg" alt="Icon">
+              Личные данные
+            </a>
+          </li>
+
+          <li>
+            <a href="accountSecure.html" class="not-decor-link mb-nav_text flex-items-center gap-8px">
+              <img width="24" class="d-block" src="../public/assets/images/account/lock.svg" alt="Icon">
+              Пароль и безопасность
+            </a>
+          </li>
+
+          <li>
+            <a href="accountFavourites.html" class="not-decor-link mb-nav_text flex-items-center gap-8px">
+              <img width="24" class="d-block" src="../public/assets/images/account/heart_dark.svg" alt="Icon">
+              Избранное
+            </a>
+          </li>
+
+          <li>
+            <a href="accountReviews.html" class="not-decor-link mb-nav_text flex-items-center gap-8px">
+              <img width="24" class="d-block" src="../public/assets/images/account/review_dark.svg" alt="Icon">
+              Мои отзывы
+            </a>
+          </li>
+
+          <li>
+            <a href="accountStates.html" class="not-decor-link mb-nav_text flex-items-center gap-8px">
+              <img width="24" class="d-block" src="../public/assets/images/account/states_dark.svg" alt="Icon">
+              Мои статьи
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mobile__menu-bottom">
+      <a href="#" class="not-decor-link mb-nav_text flex-items-center gap-8px text-red-imp">
+        <svg class="d-block" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.5333 12.1833L16.6667 10.05L14.5333 7.91667" stroke="#FF5A5F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.1333 10.05H16.6083" stroke="#FF5A5F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.79997 16.6667C6.11663 16.6667 3.1333 14.1667 3.1333 9.99999C3.1333 5.83333 6.11663 3.33333 9.79997 3.33333" stroke="#FF5A5F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        Выйти
+      </a>
+    </div>
+  </div>
+</div>
+
+<header class="bg-white">
+  <div class="w-full d-flex justify-center">
+    <div class="header__wrapper">
+      <div class="header_left">
+        <p class="text-light-grey m-0">
+          Самое важное про текущую ситуацию:
+
+          <span class="border-underline"
+                id="headerUnderline">
+              <a href="#"
+                 data-text="header"
+                 class="text-dark text-medium not-decor-link">
+                сводка,
+              </a>
+
+              <a href="#"
+                 data-text="header"
+                 class="text-dark text-medium not-decor-link">
+                телеграм-канал
+              </a>
+          </span>
+        </p>
+      </div>
+
+      <div class="flex-items-center text-medium gap-2">
+        <p class="text-dark-half m-0">
+          Пн-Пт с 9:00 до 19:00
+        </p>
+
+        <div>
+          <a data-text="header"
+             class="text-dark not-decor-link"
+             href="tel:+78822345300">
+            +7(882) 23-45-300
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="w-full d-flex justify-center">
+    <div class="header__wrapper">
+      <div class="flex-items-center gap-4">
+        <a href="../index.html">
+          <img src="../public/assets/images/logotypes/dark-logo.svg"
+               alt="Logotype">
+        </a>
+
+        <nav>
+          <ul class="navigation_list gap-3">
+            <li class="navigation_list__item relative">
+              <a class="not-decor-link"
+                 href="#">
+                <div class="drop_menu"
+                     id="excursions">
+                  <p class="hotel_text text-dark m-0 lh-20"
+                     data-text="header">
+                    Отзывы
+                  </p>
+
+                  <img class="user-select-none drop_menu_arrow"
+                       id="dropExcursionsArrow"
+                       src="../public/assets/images/icons/arrow_down_dark.svg"
+                       alt="Arrow Down">
+                </div>
+              </a>
+
+              <div class="dropmenu_block"
+                   id="dropExcursionsMenu">
+                <div class="drop_container">
+                  <div class="drop_container__wrapper">
+                    <div class="menu_column">
+                      <a href="catalogHotel.html"
+                         class="text-nowrap d-block not-decor-link text-dark sm-text">
+                        Отели
+                      </a>
+
+                      <a href="catalogExcursion.html"
+                         class="text-nowrap d-block not-decor-link text-dark sm-text">
+                        Впечатления
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="navigation_list__item">
+              <a href="blog.html"
+                 data-text="header"
+                 class="text-dark not-decor-link lh-20">
+                Блог
+              </a>
+            </li>
+
+            <li class="navigation_list__item">
+              <a href="about.html"
+                 data-text="header"
+                 class="text-dark not-decor-link lh-20">
+                О компании
+              </a>
+            </li>
+
+            <li class="navigation_list__item">
+              <a href="contact.html"
+                 data-text="header"
+                 class="text-dark not-decor-link lh-20">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex-items-center gap-3 relative">
+        <div>
+          <a href="../dist/pages/reviewAdd.html"
+             data-text="header"
+             class="text-dark text-medium not-decor-link">
+            Написать отзыв
+          </a>
+        </div>
+
+        <div class="account_icon" id="accountIcon">
+          <img class="account_icon__avatar" src="../public/assets/images/reviews/people1.jpg" alt="Account" loading="lazy">
+
+          <div class="account_icon__name">
+            <p class="sm-text text-dark m-0">
+              Юлия
+            </p>
+
+            <svg id="accountMenuArrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 8.33331L10.8838 12.161C10.3977 12.613 9.60227 12.613 9.11616 12.161L5 8.33331" stroke="#AEAEB5" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="account_navigation" id="accountNav">
+          <div class="account_navigation__wrapper">
+            <a href="myAccount.html" class="not-decor-link account_navigation__item">
+              Личные данные
+            </a>
+
+            <a href="accountSecure.html" class="not-decor-link account_navigation__item">
+              Пароль и безопасность
+            </a>
+
+            <a href="accountFavourites.html" class="not-decor-link account_navigation__item">
+              Избранное
+            </a>
+
+            <a href="accountReviews.html" class="not-decor-link account_navigation__item">
+              Мои отзывы
+            </a>
+
+            <a href="accountStates.html" class="not-decor-link account_navigation__item">
+              Мои статьи
+            </a>
+
+            <hr class="account_navigation__line">
+
+            <div class="account_navigation__exit">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5333 12.1833L16.6667 10.05L14.5333 7.91667" stroke="#FF5A5F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.1333 10.05H16.6083" stroke="#FF5A5F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.79997 16.6667C6.11663 16.6667 3.1333 14.1667 3.1333 9.99999C3.1333 5.83333 6.11663 3.33333 9.79997 3.33333" stroke="#FF5A5F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+              Выйти
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header >
+
+<div class="mobile_top_header bg-white">
+  <div class="mobile_top_header__wrapper">
+    <div class="mobile_top_header__logo">
+      <a href="../index.html">
+        <img src="../public/assets/images/logotypes/mobile-dark-logo.svg" loading="lazy" alt="Logotype">
+      </a>
+    </div>
+
+    <div class="mobile_top_header__menu">
+      <button type="button" class="mb_action mobile_account" id="account">
+        <img src="../public/assets/images/reviews/people1.jpg" loading="lazy" alt="Profile">
+      </button>
+
+      <button type="button" class="mb_action" id="burger">
+        <img src="../public/assets/images/icons/dark_burger.svg" loading="lazy" alt="Burger">
+      </button>
+    </div>
+  </div>
+</div>
+
+<main class="md_padding_under_header overflow-visible">
+  <div class="container">
+    <div class="container_block">
+      <div class="account_form_block">
+        <div class="account_previous">
+          <div class="bread_crumbs">
+            <a href="../index.html" class="bread_crumbs__item bread_crumbs__active">
+              Главная
+            </a>
+
+            <img class="d-block" src="../public/assets/images/icons/arrow_right_dark.svg" loading="lazy" alt="Arrow">
+
+            <a href="myAccount.html" class="bread_crumbs__item">
+              Личный кабинет
+            </a>
+          </div>
+
+          <h1 class="contact_title">
+            Личный кабинет
+          </h1>
+        </div>
+
+        <div class="account">
+          <div class="account__menu">
+            <div class="account__menu-wrap">
+              <a href="myAccount.html" class="not-decor-link account_menu_item account_menu_active">
+                <svg class="d-block" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.1733 11.7758C13.0649 11.765 12.9349 11.765 12.8158 11.7758C10.2374 11.6892 8.18994 9.57666 8.18994 6.97666C8.18994 4.32249 10.3349 2.16666 12.9999 2.16666C15.6541 2.16666 17.8099 4.32249 17.8099 6.97666C17.7991 9.57666 15.7516 11.6892 13.1733 11.7758Z" stroke="#0077FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7.75678 15.7733C5.13511 17.5283 5.13511 20.3883 7.75678 22.1325C10.7359 24.1258 15.6218 24.1258 18.6009 22.1325C21.2226 20.3775 21.2226 17.5175 18.6009 15.7733C15.6326 13.7908 10.7468 13.7908 7.75678 15.7733Z" stroke="#0077FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                Личные данные
+              </a>
+
+              <a href="accountSecure.html" class="not-decor-link account_menu_item">
+                <svg class="d-block" width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 10V8C6 4.69 7 2 12 2C17 2 18 4.69 18 8V10" stroke="#0077FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17 22H7C3 22 2 21 2 17V15C2 11 3 10 7 10H17C21 10 22 11 22 15V17C22 21 21 22 17 22Z" stroke="#0077FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15.9965 16H16.0054" stroke="#0077FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.9955 16H12.0045" stroke="#0077FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7.99451 16H8.00349" stroke="#0077FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                Пароль и безопасность
+              </a>
+
+              <a href="accountFavourites.html" class="not-decor-link account_menu_item">
+                <svg class="d-block" width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.69001C2 5.60001 4.49 3.10001 7.56 3.10001C9.38 3.10001 10.99 3.98001 12 5.34001C13.01 3.98001 14.63 3.10001 16.44 3.10001C19.51 3.10001 22 5.60001 22 8.69001C22 15.69 15.52 19.82 12.62 20.81Z" stroke="#0077FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                Избранное
+              </a>
+
+              <a href="accountReviews.html" class="not-decor-link account_menu_item">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.20817 20.5833H8.6665C4.33317 20.5833 2.1665 19.5 2.1665 14.0833V8.66663C2.1665 4.33329 4.33317 2.16663 8.6665 2.16663H17.3332C21.6665 2.16663 23.8332 4.33329 23.8332 8.66663V14.0833C23.8332 18.4166 21.6665 20.5833 17.3332 20.5833H16.7915C16.4557 20.5833 16.1307 20.7458 15.9248 21.0166L14.2998 23.1833C13.5848 24.1366 12.4148 24.1366 11.6998 23.1833L10.0748 21.0166C9.9015 20.7783 9.50067 20.5833 9.20817 20.5833Z" stroke="#9FA5A9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7.5835 8.66663H18.4168" stroke="#9FA5A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7.5835 14.0834H14.0835" stroke="#9FA5A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                Мои отзывы
+              </a>
+
+              <a href="accountStates.html" class="not-decor-link account_menu_item">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.6665 2.16663V5.41663" stroke="#9FA5A9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17.3335 2.16663V5.41663" stroke="#9FA5A9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22.75 9.20829V18.4166C22.75 21.6666 21.125 23.8333 17.3333 23.8333H8.66667C4.875 23.8333 3.25 21.6666 3.25 18.4166V9.20829C3.25 5.95829 4.875 3.79163 8.66667 3.79163H17.3333C21.125 3.79163 22.75 5.95829 22.75 9.20829Z" stroke="#9FA5A9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.6665 11.9166H17.3332" stroke="#9FA5A9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.6665 17.3334H12.9998" stroke="#9FA5A9" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                Мои статьи
+              </a>
+            </div>
+          </div>
+
+          <div class="account__main">
+            <div class="account__main-top">
+              <div class="lk_form">
+                <div class="lk_form__title">
+                  <h3>
+                    Личные данные
+                  </h3>
+
+                  <p class="m-0 lg-text text-dark">
+                    Эта информация не будет доступна публично. Она будет использована только для автозаполнения ваших данных и поможет вам совершать бронирования быстрее.
+                  </p>
+                </div>
+
+                <form method="post" action="#" class="lk_form__content main_form">
+                  <div class="load_photo">
+                    <div class="w-full flex-items-center gap-20px-imp">
+                      <div class="load_photo__circle">АШ</div>
+
+                      <div class="flex-col gap-12px justify-between flex-grow">
+                        <label for="avatar-upload" class="btn btn__loading_photo">
+                          Загрузить фото
+                        </label>
+                        <input class="d-none-imp" id="avatar-upload" name="profile_photo" type="file"/>
+
+                        <button type="button" class="btn btn__delete_photo">
+                          <img class="d-block" src="../public/assets/images/account/trash.svg" alt="Icon" loading="lazy">
+                          Удалить фото
+                        </button>
+                      </div>
+                    </div>
+
+                    <p class="m-0 xs-text text-main-gray">
+                      Рекомендованный размер изображения: 256 на 256 пикселей
+                    </p>
+                  </div>
+
+                  <div class="lk_form_inputs">
+                    <div class="lk_input">
+                      <input type="text" placeholder="Имя" name="profile_firstname" oninput="validateTextInput(event)">
+                    </div>
+
+                    <div class="lk_input">
+                      <input type="text" placeholder="Фамилия" name="profile_lastname" oninput="validateTextInput(event)">
+                    </div>
+
+                    <div class="lk_input">
+                      <input type="text" placeholder="Дата рождения (01.01.1986)" name="profile_birthday" oninput="applyDateFormat(this)">
+                    </div>
+
+                    <div class="lk_input">
+                      <div class="selector">
+                        <input type="text" placeholder="Гражданство" name="profile_nationality" readonly>
+
+                        <img class="lk_input__icon selector_arrow" src="../public/assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+
+                        <div class="selector_block">
+                          <ul class="selector_block__list">
+                            <li class="selector_block__item">
+                              Российская Федерация
+                            </li>
+
+                            <li class="selector_block__item">
+                              Украина
+                            </li>
+
+                            <li class="selector_block__item">
+                              Республика Беларусь
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lk_form_radio">
+                    <div class="lk_form_radio__wrapper">
+                      <input class="custom-radio" name="man" type="radio" id="radio_man" checked>
+                      <label for="radio_man" class="lg-text radio_active">Мужской</label>
+                    </div>
+
+                    <div class="lk_form_radio__wrapper">
+                      <input class="custom-radio" name="man" type="radio" id="radio_woman">
+                      <label for="radio_woman" class="lg-text">Женский</label>
+                    </div>
+                  </div>
+
+                  <div class="lk_form_inputs">
+                    <div class="lk_input">
+                      <input type="tel" placeholder="Телефон" name="profile_phone" class="phone_number" minlength="17" maxlength="17">
+                    </div>
+
+                    <div class="lk_input">
+                      <input type="email" placeholder="Email" name="profile_email">
+                      <div class="errorHold"></div>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn blue_btn">
+                    Сохранить
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer__wrapper">
+    <div class="footer_top">
+      <a href="../index.html"
+         class="d-block">
+        <img src="../public/assets/images/logotypes/dark-logo.svg"
+             alt="Logotype"
+             loading="lazy">
+      </a>
+
+      <a href="../dist/pages/reviewAdd.html"
+         class="flex-items-center btn btn__login not-decor-link link__lg">
+        Написать отзыв
+      </a>
+    </div>
+
+    <div class="footer_center">
+      <p class="text-dark m-0 footer_text">
+        Ищите жилье для отдыха или поездки?
+        Переходите на наш сайт
+        <a href="#"
+           class="text-main-col not-decor-link">
+          Hospitality.ru
+        </a>
+      </p>
+
+      <a href="../dist/pages/reviewAdd.html"
+         class="w-full flex-items-center justify-center btn btn__login not-decor-link link__sm">
+        Написать отзыв
+      </a>
+
+      <nav class="footer_nav footer_center-lg">
+        <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Cлужба помощи
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="policyPage.html"
+               class="not-decor-link text-dark">
+              Справочный раздел
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#"
+               class="not-decor-link text-dark">
+              Контакты
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Меню
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#"
+               class="not-decor-link text-dark">
+              Вопросы и ответы
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="blog.html"
+               class="not-decor-link text-dark">
+              Новости
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="blog.html"
+               class="not-decor-link text-dark">
+              Статьи
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="about.html"
+               class="not-decor-link text-dark">
+              О компании
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Отзывы
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#"
+               class="not-decor-link text-dark">
+              Об отелях
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#"
+               class="not-decor-link text-dark">
+              О экскурсиях
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#"
+               class="not-decor-link text-dark">
+              О театрах
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Услуги
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#"
+               class="not-decor-link text-dark">
+              Забронировать отель
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#"
+               class="not-decor-link text-dark">
+              Записаться на экскурсию
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer_center-sm">
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Служба помощи
+            </p>
+
+            <div>
+              <img class="footer_arrow"
+                   src="../public/assets/images/icons/arrow_down_dark.svg"
+                   alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#"
+                 class="not-decor-link text-dark">
+                Справочный раздел
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="contact.html"
+                 class="not-decor-link text-dark">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Меню
+            </p>
+
+            <div>
+              <img class="footer_arrow"
+                   src="../public/assets/images/icons/arrow_down_dark.svg"
+                   alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#"
+                 class="not-decor-link text-dark">
+                Вопросы и ответы
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="blog.html"
+                 class="not-decor-link text-dark">
+                Новости
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="blog.html"
+                 class="not-decor-link text-dark">
+                Статьи
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="about.html"
+                 class="not-decor-link text-dark">
+                О компании
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Отзывы
+            </p>
+
+            <div>
+              <img class="footer_arrow"
+                   src="../public/assets/images/icons/arrow_down_dark.svg"
+                   alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#"
+                 class="not-decor-link text-dark">
+                Об отелях
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#"
+                 class="not-decor-link text-dark">
+                О экскурсиях
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#"
+                 class="not-decor-link text-dark">
+                О театрах
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Услуги
+            </p>
+
+            <div>
+              <img class="footer_arrow"
+                   src="../public/assets/images/icons/arrow_down_dark.svg"
+                   alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#"
+                 class="not-decor-link text-dark">
+                Забронировать отель
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#"
+                 class="not-decor-link text-dark">
+                Записаться на экскурсию
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="social_network">
+        <p class="m-0 text-center text-main-gray text-nowrap text-medium with_we">
+          Будьте с нами
+        </p>
+
+        <div class="flex-items-center gap-12px">
+          <a href="#"
+             class="not-decor-link d-block">
+            <img src="../public/assets/images/networks/vk.svg"
+                 alt="VK"
+                 loading="lazy">
+          </a>
+
+          <a href="#"
+             class="not-decor-link d-block">
+            <img src="../public/assets/images/networks/tg.svg"
+                 alt="Telegram"
+                 loading="lazy">
+          </a>
+
+          <a href="#"
+             class="not-decor-link d-block">
+            <img src="../public/assets/images/networks/yt.svg"
+                 alt="Youtube"
+                 loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="footer_bottom-top">
+        <div class="foot-top flex-items-center gap-32px-imp">
+          <a href="#"
+             class="text-main-gray">
+            Политика обработки персональных данных
+          </a>
+
+          <a href="#"
+             class="text-main-gray">
+            Правовая информация
+          </a>
+        </div>
+      </div>
+
+      <div class="footer_bottom-bottom">
+        <p class="text-main-gray m-0">
+          © Hotels-expert.store - отзывы о посещении отелей и достопримечательностей России. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=viewport-units"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewport-units-buggyfill/0.6.2/viewport-units-buggyfill.js"></script>
+
+<script>
+    window.onload = function() {
+        window.viewportUnitsBuggyfill.init();
+    };
+</script>
+
+<script src="https://unpkg.com/libphonenumber-js/bundle/libphonenumber-js.min.js"></script>
+
+<script src="../public/assets/scripts/dropMenu.js"></script>
+<script src="../public/assets/scripts/mobileHeader.js"></script>
+<script src="../public/assets/scripts/inputText.js"></script>
+<script src="../public/assets/scripts/inputNumber.js"></script>
+<script src="../public/assets/scripts/account/accountHead.js"></script>
+<script src="../public/assets/scripts/account/birthdayFormated.js"></script>
+<script src="../public/assets/scripts/account/selector.js"></script>
+<script src="../public/assets/scripts/account/phoneFormatted.js"></script>
+<script src="../public/assets/scripts/account/closeSelectorBlocks.js"></script>
+<script src="../public/assets/scripts/account/lkRadio.js"></script>
+<script src="../public/assets/scripts/account/lkValidator.js"></script>
+<script src="../public/assets/scripts/account/emailValidator.js"></script>
+<script src="../public/assets/scripts/closePopUpClick.js"></script>
+<script src="../public/assets/scripts/footerNavigation.js"></script>
+<script src="../public/assets/scripts/addFunctionAttributes.js"></script>
+</body>
+</html>
