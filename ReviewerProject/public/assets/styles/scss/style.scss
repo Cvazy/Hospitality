@@ -11525,7 +11525,7 @@ main {
 
 .obj_location {
   position: fixed;
-  z-index: 1300;
+  z-index: 1350;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
@@ -11545,8 +11545,16 @@ main {
     position: relative;
 
     @include respondedBy(767px) {
+      height: 55%;
+    }
+
+    @include respondedBy(480px) {
       height: 100%;
       max-width: 100% !important;
+
+      .btn_map_about_plus {
+        top: 40% !important;
+      }
     }
 
     .obj_map {
@@ -11561,14 +11569,6 @@ main {
         @include respondedBy(767px) {
           border-radius: 12px;
         }
-      }
-
-      .ymaps-2-1-79-balloon__layout {
-        width: 310px;
-      }
-
-      .ymaps-2-1-79-balloon__close {
-        width: 30px;
       }
     }
   }

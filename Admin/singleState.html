@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Admin partner">
+    <link rel="icon" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link href="assets/styles/css/style.css" rel="stylesheet">
+    <link href="assets/styles/css/base.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet"
+          href="assets/styles/css/fancybox_custom.css">
+    <title>Hospitality - Детальная страница статьи</title>
+</head>
+<body>
+
+<div class="d-none-imp blackout">
+    <div class="blackout__wrapper">
+        <div class="blackout__block">
+            <form method="post" action="#" class="blackout__block-wrap">
+                <div class="blackout__top">
+                    <p class="blackout__title">
+                        Комментарий
+                    </p>
+
+                    <button type="button" class="hidden_modal modal_cross">
+                        <img src="assets/images/close.svg" alt="Close" loading="lazy">
+                    </button>
+                </div>
+
+                <textarea class="user_info__input" name="block_reason" placeholder="Причина блокировки"></textarea>
+
+                <div class="blackout__bottom">
+                    <button type="button" class="blackout__btn hidden_modal modal_close">
+                        Отменить
+                    </button>
+
+                    <button type="submit" class="blackout__btn modal_submit">
+                        Заблокировать
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="admin">
+    <div class="admin__wrapper">
+        <div class="notify container">
+            <div class="notify__wrapper">
+                <div class="notify__top">
+                    <a href="notify.html" target="_blank" class="notify_logo">
+                        <img src="assets/images/logo_icon.svg" alt="Logo" loading="lazy">
+
+                        <div class="counter">3</div>
+                    </a>
+
+                    <div class="notify__messages">
+                        <div class="message_item">
+                            <p class="message_item__text">
+                                Ожидает подтверждение регистрации
+                                <a href="partners.html">
+                                    5 новых партнеров
+                                </a>
+                            </p>
+
+                            <!--                            Пример кнопки для скрытия уведомления-->
+                            <!--                            <button type="button" class="notify__hidden">-->
+                            <!--                                Скрыть-->
+                            <!--                            </button>-->
+                        </div>
+
+                        <div class="message_item">
+                            <p class="message_item__text">
+                                Lorem ipsum dolor sit amet.
+                                Lorem ipsum dolor sit amet.
+                                Lorem ipsum dolor sit amet.
+                                Lorem ipsum dolor sit amet.
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mobile_head">
+                        <div class="top_list">
+                            <button type="button" class="top_list__text">
+                                Иван Иванович
+                            </button>
+
+                            <div class="nav_hidden right-0">
+                                <div class="nav_hidden__exit">
+                                    <a href="auth.html" class="nav_hidden__item">
+                                        <p>Выйти</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="notify.html" class="notify__icon">
+                            <img src="assets/images/notify.svg" alt="Icon" loading="lazy">
+
+                            <div class="tumbler"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="notify__bottom">
+                    <div class="notify__links">
+                        <a href="partners.html" class="notify__group">
+                            Партнёры (+5)
+                        </a>
+
+                        <a href="objects.html" class="notify__group">
+                            Объекты (+43)
+                        </a>
+
+                        <a href="excursions.html" class="notify__group">
+                            Впечатления (+81)
+                        </a>
+
+                        <a href="reviews.html" class="notify__group">
+                            Отзывы (+401)
+                        </a>
+
+                        <div class="top_list">
+                            <button type="button" class="top_list__text">
+                                Клиенты
+                            </button>
+
+                            <div class="nav_hidden left-0">
+                                <div class="nav_hidden__links">
+                                    <a href="clients.html" class="nav_hidden__item">
+                                        <p>Клиенты</p>
+
+                                        <p>(+43)</p>
+                                    </a>
+
+                                    <a href="bloggers.html" class="nav_hidden__item">
+                                        <p>Блогеры</p>
+
+                                        <p>(+81)</p>
+                                    </a>
+
+                                    <a href="states.html" class="nav_hidden__item">
+                                        <p>Статьи</p>
+
+                                        <p>(+401)</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="top_list">
+                        <button type="button" class="top_list__text">
+                            Иван Иванович
+                        </button>
+
+                        <div class="nav_hidden right-0">
+                            <div class="nav_hidden__exit">
+                                <a href="auth.html" class="nav_hidden__item">
+                                    <p>Выйти</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="main_wrap">
+                <a href="states.html">
+                    <div class="back_partner">
+                        <p>Статьи</p>
+
+                        <svg width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 13.5L10.9449 9.79545C11.3517 9.35795 11.3517 8.64205 10.9449 8.20455L7.5 4.5" stroke="#037DB1" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <div class="review">
+                    <div class="state__main" id="mainBlog">
+                        <h1 class="state_title">
+                            Куда поехать отдохнуть
+                            в России в 2022
+                        </h1>
+
+                        <div class="state__container">
+                            <div class="state_text_block">
+                                <p class="m-0 lg-text text-dark">
+                                    Если ты старательно изучал просторы нашей страны, и тебе кажется, что посмотреть больше нечего — спешим тебя переубедить. Россия — это тысячи мест, где можно отдохнуть душой и забыть про стресс большого города.
+                                </p>
+
+                                <p class="m-0 lg-text text-dark">
+                                    В сегодняшней статье собрали десять мест, куда можно поехать в России и от посещения которых у тебя захватит дух!
+                                </p>
+                            </div>
+
+                            <div class="state_text_block">
+                                <h2 class="state_subtitle">
+                                    Национальный парк «Таганай»
+                                </h2>
+
+                                <div class="state_text_block__topic">
+                                    <div class="topic_item">
+                                        <p class="m-0 lg-text text-dark">
+                                            <span class="text-bold">Где:</span>
+                                            Златоуст
+                                        </p>
+                                    </div>
+
+                                    <div class="topic_item">
+                                        <p class="m-0 lg-text text-dark">
+                                            <span class="text-bold">Как добраться:</span>
+                                            на городском автобусе № 28, 14к, 15 до остановки «Магазин “Белый ключ”», затем 600 м пешком до входа в парк. Такси довезёт прямо до центральной усадьбы, проверено работают Uber и Яндекс.
+                                        </p>
+                                    </div>
+
+                                    <div class="topic_item">
+                                        <a href="#" class="d-block not-decor-link lg-text text-main-col">
+                                            Узнать, что еще можно посмотреть в Златоусте
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="state_text_block">
+                                    <p class="m-0 lg-text text-dark">
+                                        Таганай — это исполинский Откликной гребень и величественная Круглица, острые перья Двуглавой сопки и Большая курумная река, реликтовая горная тундра и дикая тайга, где по своим законам живут медведи, рыси и лоси. Это километры троп и покрытые яркими лишайниками камни, красивейшие закаты и чистейшие родники. Это радость достижения целей и усталость после долгого насыщенного дня приключений.
+                                    </p>
+
+                                    <p class="m-0 lg-text text-dark">
+                                        Одно из самых впечатляющий мест Таганая — Большая Каменная река. Представь каменную реку длиной 6 км и шириной от 200 до 700 м, вольно раскинувшуюся среди тайги и отрогов гор. Камни и глыбы, покрытые характерными для Таганая ярко-зелёными пятнами лишайников, напоминают яйцо древних ящеров. Размеры валунов впечатляют, встречаются экземпляры от футбольного мяча до девятитонных блоков, сравнимых с домом.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="state_text_block">
+                                <div class="flex-col gap-16px max-w-swiper align-center w-full">
+                                    <div class="gallery small_gallery_gap">
+                                        <div class="gallery__main small_gallery small_gallery2">
+                                            <div class="swiper-wrapper">
+                                                <a data-fancybox="gallery2" href="assets/images/wild/wild1.jpg" class="swiper-slide not-decor-link btn">
+                                                    <img src="assets/images/wild/wild1.jpg" loading="lazy" alt="Wild">
+                                                </a>
+
+                                                <a data-fancybox="gallery2" href="assets/images/wild/wild2.jpg" class="swiper-slide not-decor-link btn">
+                                                    <img src="assets/images/wild/wild2.jpg" loading="lazy" alt="Wild">
+                                                </a>
+
+                                                <a data-fancybox="gallery2" href="assets/images/wild/wild3.jpg" class="swiper-slide not-decor-link btn">
+                                                    <img src="assets/images/wild/wild3.jpg" loading="lazy" alt="Wild">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="gallery__nav small_thumbs small_thumbs2">
+                                            <div class="gallery__nav-wrapper swiper-wrapper small_gallery_gap">
+                                                <div class="swiper-slide gallery_nav_item pointer">
+                                                    <img src="assets/images/wild/wild1.jpg" loading="lazy" alt="Wild">
+                                                </div>
+
+                                                <div class="swiper-slide gallery_nav_item pointer">
+                                                    <img src="assets/images/wild/wild2.jpg" loading="lazy" alt="Wild">
+                                                </div>
+
+                                                <div class="swiper-slide gallery_nav_item pointer">
+                                                    <img src="assets/images/wild/wild3.jpg" loading="lazy" alt="Wild">
+                                                </div>
+
+                                                <a data-fancybox="gallery2" href="assets/images/wild/wild1.jpg" class="not-decor-link gallery_nav_item gallery_nav_last btn">
+                                                    <p class="gallery_nav_last__counter text-medium xl-text">
+                                                        +25
+                                                    </p>
+
+                                                    <img src="assets/images/wild/wild5.jpg" loading="lazy" alt="Wild">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-col gap-4px">
+                                        <p class="m-0 lg-text text-dark text-medium">
+                                            Это самая большая каменная река в мире.
+                                        </p>
+
+                                        <p class="m-0 sm-text text-main-gray">
+                                            Фото: Kosmogenez / Shutterstock.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="state_text_block">
+                                <p class="m-0 lg-text text-dark">
+                                    Это самая большая каменная река в мире, нечто подобное можно найти ещё разве что в Индии, но там масштабы поменьше. Деревья на реке не растут, лишь изредка встречаются одиночные столетние сосны. Под авантюриновыми волнами шумят десятки горных ручьёв.
+                                </p>
+
+                                <p class="m-0 lg-text text-dark">
+                                    Вход в национальный парк платный — 150 руб., экскурсии и проживание, а также аренда беседок, баня и дрова оплачиваются отдельно. Заранее приготовь наличку для оплаты, карты могут не работать.
+                                </p>
+                            </div>
+
+                            <div class="state_text_block">
+                                <h2 class="state_subtitle">
+                                    Парк «Оленьи ручьи»
+                                </h2>
+
+                                <div class="state_text_block__topic">
+                                    <div class="topic_item">
+                                        <p class="m-0 lg-text text-dark">
+                                            <span class="text-bold">Где:</span>
+                                            Златоуст. Свердловская область, Екатеринбург.
+                                        </p>
+                                    </div>
+
+                                    <div class="topic_item">
+                                        <p class="m-0 lg-text text-dark">
+                                            <span class="text-bold">Как добраться:</span>
+                                            на туристическом поезде «Орлан» за 600 руб. туда-обратно, время в пути 2 часа 40 минут в одну сторону; на авто — расстояние от Екатеринбурга 120 км.
+                                        </p>
+                                    </div>
+
+                                    <div class="topic_item">
+                                        <a href="#" class="d-block not-decor-link lg-text text-main-col">
+                                            Узнать, что еще можно посмотреть в Екатеринбурге
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="state_text_block">
+                                    <p class="m-0 lg-text text-dark">
+                                        Природный парк известен карстовыми провалами и самой крупной на Среднем Урале пещерой под названием «Дружба», обзорными площадками с живописными видами на реку Серьгу, скалами, скульптурой Ангела единой надежды и писанцами — наскальными рисунками древних людей.
+                                    </p>
+
+                                    <div class="flex-items-start gap-12px">
+                                        <div class="numbers">1</div>
+
+                                        <p class="m-0 lg-text text-dark">
+                                            Тропы в парке промаркированы, сделаны удобные лестницы, указатели и места отдыха.
+                                        </p>
+                                    </div>
+
+                                    <div class="flex-items-start gap-12px">
+                                        <div class="numbers">2</div>
+
+                                        <p class="m-0 lg-text text-dark">
+                                            Также есть возможность купить тур от 1200 до 2400 руб., в стоимость входит проезд до парка, билеты и экскурсия с гидом.
+                                        </p>
+                                    </div>
+
+                                    <div class="flex-items-start gap-12px">
+                                        <div class="numbers">3</div>
+
+                                        <p class="m-0 lg-text text-dark">
+                                            Входной билет — 372 руб., отдельно можно заказать экскурсии, проживание, аренду беседок, дрова и т.д.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="state_text_block">
+                                <img class="d-block w-full h-full br-20px" src="assets/images/wild/wild6.jpg" alt="Wild" loading="lazy">
+
+                                <div class="flex-col gap-4px">
+                                    <p class="m-0 lg-text text-dark text-medium">
+                                        Обрати внимание на обзорные площадки с живописными видами на реку Серьгу.
+                                    </p>
+
+                                    <p class="m-0 sm-text text-main-gray">
+                                        Фото: Kosmogenez / Shutterstock.com
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="legend">
+                                <div class="legend__wrapper">
+                                    <h3 class="legend__title">
+                                        А что по местным легендам?
+                                    </h3>
+
+                                    <p class="m-0 text-dark lg-text">
+                                        У местных народов своё мнение насчёт того, как скалы здесь появились: они верят, что скалы — это застывшие навеки древние боги, наказанные за проступки сверхъестественными силами. Это объясняет и перевод местного названия столбов Туруук Хайалара — «Горы восставших богов».
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="state_text_block" id="ruskeala">
+                                <h2 class="state_subtitle">
+                                    Горный парк «Рускеала»
+                                </h2>
+
+                                <div class="state_text_block__topic">
+                                    <div class="topic_item">
+                                        <p class="m-0 lg-text text-dark">
+                                            <span class="text-bold">Где:</span>
+                                            Петрозаводск
+                                        </p>
+                                    </div>
+
+                                    <div class="topic_item">
+                                        <p class="m-0 lg-text text-dark">
+                                            <span class="text-bold">Как добраться:</span>
+                                            37 км на машине на северо-запад от города Сортавала. Расстояние от Санкт-Петербурга — примерно 350 км.
+                                            <br>
+                                            Время в пути — 4 часа.
+                                        </p>
+                                    </div>
+
+                                    <div class="topic_item">
+                                        <a href="#" class="d-block not-decor-link lg-text text-main-col">
+                                            Узнать, что еще можно посмотреть в Рускеале
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="state_text_block">
+                                    <p class="m-0 text-dark lg-text">
+                                        Горный парк «Рускеала» — одна из главных достопримечательностей Карелии, куда советуют поехать многие путешественники. Самое популярное место парка — Мраморный карьер, заполненный грунтовой водой. Длина карьера — 500 м, ширина — около 100, глубина — 50. Любоваться можно со всех сторон — по всему периметру расположены смотровые площадки.
+                                    </p>
+                                </div>
+
+                                <div class="state_text_block">
+                                    <div class="state_banner">
+                                        <div class="state_banner__wrapper">
+                                            <div class="state_banner__left">
+                                                <img src="assets/images/wild/wild9.jpg" alt="Image" loading="lazy">
+                                            </div>
+
+                                            <div class="state_banner__right desktop_info">
+                                                <div class="flex-col gap-12px">
+                                                    <p class="banner_title">
+                                                        Экскурсия «Подземная Рускеала»
+                                                    </p>
+
+                                                    <p class="banner_price">
+                                                        Стоимость:
+                                                        <span class="text-dark">1500 ₽</span>
+                                                    </p>
+                                                </div>
+
+                                                <a href="#" class="sm-text text-medium text-main-col">
+                                                    Подробнее
+                                                </a>
+                                            </div>
+
+                                            <div class="state_banner__right mobile_info">
+                                                <p class="banner_title">
+                                                    Экскурсия «Подземная Рускеала»
+                                                </p>
+
+                                                <div class="flex-items-center justify-between gap-16px w-full">
+                                                    <div class="flex-col gap-4px flex-items-start">
+                                                        <p class="banner_price">
+                                                            Стоимость:
+                                                        </p>
+
+                                                        <p class="sm-text m-0 text-dark text-medium">
+                                                            1500 ₽
+                                                        </p>
+                                                    </div>
+
+                                                    <a href="#" class="not-decor-link btn btn__login sm-text text-medium">
+                                                        Подробнее
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="state_text_block">
+                                    <div class="d-flex gap-16px mt-gallery">
+                                        <img src="assets/images/wild/wild7.jpg" alt="Wild" loading="lazy">
+
+                                        <img src="assets/images/wild/wild8.jpg" alt="Wild" loading="lazy">
+                                    </div>
+
+                                    <div class="flex-col gap-4px">
+                                        <p class="m-0 lg-text text-dark text-medium">
+                                            Самое популярное место парка — Мраморный карьер, заполненный грунтовой водой.
+                                        </p>
+
+                                        <p class="m-0 sm-text text-main-gray">
+                                            Фото: Kosmogenez / Shutterstock.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog_final">
+                                <div class="blog_final__wrapper">
+                                    <p class="final_title">
+                                        Выводы
+                                    </p>
+
+                                    <p class="m-0 text-white lg-text">
+                                        Самый большой из гейзеров — «Великан» — выбрасывает 30 тонн горячей воды за минуту, высота кипящего столба равноценна высоте девятиэтажного дома, а столб пара поднимается на 300 м, и сопровождается данное зрелище оглушительным рёвом. Только представь, какая мощь!
+                                    </p>
+
+                                    <p class="m-0 text-white lg-text">
+                                        К западу от «Великана» есть гейзер «Жемчужный», расположенный в колодце, покрытом гейзеритом, который выглядит как жемчуг. Гейзер фонтанирует три минуты, фонтан достигает высоты 12 м, а парение происходит даже в состоянии покоя. Кстати, возраст гейзеров определяют по толщине и структуре гейзерита: камень выглядит очень красочно благодаря примесям в составе воды.
+                                    </p>
+
+                                    <p class="m-0 text-white lg-text">
+                                        Эти места запали в душу нам лично, но, конечно, удивительных локаций гораздо больше, выбрать было очень трудно!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user_actions">
+                    <button type="button" class="user_actions__save">
+                        Подтвердить размещение
+                    </button>
+
+                    <button type="button" class="user_actions__delete">
+                        Заблокировать
+                    </button>
+                </div>
+
+                <footer>
+                    <div class="footer_wrap">
+                        <div class="footer_wrap__top">
+                            <a href="#" class="d-block">
+                                <img class="footer_logo" src="assets/images/logo_dark.svg" alt="Logo" loading="lazy">
+                            </a>
+
+                            <div class="footer_info">
+                                <p class="footer_info__text">
+                                    Hospitality.ru - часть Hospitality Holdings Inc.,
+                                    мирового лидера в сфере бронирования жилья и сопроводительных услуг.
+                                </p>
+
+                                <div class="footer_info__bottom">
+                                    <a href="#" target="_blank">
+                                        Бронирование отелей
+                                    </a>
+
+                                    <a href="#" target="_blank">
+                                        Услуги
+                                    </a>
+
+                                    <a href="#" target="_blank">
+                                        Отзывы
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="footer_wrap__bottom">
+                            <p>
+                                © Hospitality.ru - бронирование гостиниц и квартир. Все права защищены.
+                            </p>
+
+                            <div class="payment">
+                                <p class="text-nowrap">
+                                    Принимаем к оплате:
+                                </p>
+
+                                <div class="payment__wrapper">
+                                    <img src="assets/images/visa.svg" alt="Visa" loading="lazy">
+
+                                    <img src="assets/images/mastercard.svg" alt="Mastercard" loading="lazy">
+
+                                    <img src="assets/images/mir.svg" alt="Mir" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const config = {
+        loop: true,
+        infobar: false,
+        keyboard: true,
+
+        thumbs: {
+            autoStart: true,
+            axis: 'x'
+        },
+    }
+
+    $('[data-fancybox="gallery2"]').fancybox(config)
+</script>
+
+<script>
+    const galleryNavSmall2 = new Swiper(".small_thumbs2", {
+        spaceBetween: 0,
+        slidesPerView: 4,
+        watchSlidesProgress: true,
+    })
+
+    const gallerySmall2 = new Swiper(".small_gallery2", {
+        spaceBetween: 0,
+
+        thumbs: {
+            swiper: galleryNavSmall2,
+        },
+    })
+</script>
+
+<script src="assets/scripts/notifyHidden.js"></script>
+<script src="assets/scripts/visibleReviews.js"></script>
+<script src="assets/scripts/blockContent.js"></script>
+
+</body>
+</html>

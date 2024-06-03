@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Authentication">
+    <link rel="icon" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link href="assets/styles/css/style.css" rel="stylesheet">
+    <link href="assets/styles/css/base.css" rel="stylesheet">
+    <script src="assets/scripts/auth/authBackground.js" async></script>
+    <title>Hospitality - Авторизация</title>
+</head>
+<body>
+
+<header>
+    <div class="header_container">
+        <div class="container">
+            <div class="header_wrapper">
+                <a href="#" class="header_logo">
+                    <img src="assets/images/logo.svg" alt="Logo" loading="lazy">
+                </a>
+
+                <div class="header_contact">
+                    <p class="m-0 lg-text text-light-grey">
+                        Пн-Пт с 9:00 до 19:00
+                    </p>
+
+                    <a href="tel:+78822345300" class="d-block lg-text text-white">
+                        +7 (882) 23-45-300
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="auth">
+        <div class="head_bg">
+            <div class="container">
+                <div class="auth__wrapper">
+                    <div class="auth__block">
+                        <h1 class="auth__title">
+                            Вход в личный кабинет
+                        </h1>
+
+                        <div class="auth__window">
+                            <div class="auth_form_wrapper">
+                                <form method="post" action="#">
+                                    <input type="tel" name="auth_phone" placeholder="Телефон" class="phone_number auth_input" minlength="17" maxlength="17">
+
+                                    <input type="password" name="auth_password" placeholder="Пароль" class="auth_input">
+
+                                    <button type="submit" class="auth_submit" disabled>Войти</button>
+                                </form>
+
+                                <div class="auth_links">
+                                    <a href="#" class="auth_links__item" target="_blank">
+                                        Бронирование отелей
+                                    </a>
+
+                                    <a href="#" class="auth_links__item" target="_blank">
+                                        Услуги
+                                    </a>
+
+                                    <a href="#" class="auth_links__item" target="_blank">
+                                        Отзывы
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://unpkg.com/libphonenumber-js/bundle/libphonenumber-js.min.js"></script>
+
+<script src="assets/scripts/auth/phoneFormatted.js"></script>
+<script src="assets/scripts/auth/authValidator.js"></script>
+</body>
+</html>

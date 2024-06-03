@@ -14,6 +14,7 @@ function init() {
         {},
         {
             iconLayout: 'default#imageWithContent',
+            overlayFactory: "default#interactiveGraphics",
             iconImageHref: 'assets/images/icons/map_marker.svg',
             iconImageSize: [48, 52],
             iconImageOffset: [-15, -15],

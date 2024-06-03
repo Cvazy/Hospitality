@@ -9797,7 +9797,7 @@ main {
 
 .obj_location {
   position: fixed;
-  z-index: 1300;
+  z-index: 1350;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
@@ -9821,7 +9821,12 @@ main {
     }
 
     @include respondedBy(480px) {
-      height: 40%;
+      height: 100%;
+      max-width: 100% !important;
+
+      .btn_map_about_plus {
+        top: 40% !important;
+      }
     }
 
     .obj_map {
@@ -9831,6 +9836,7 @@ main {
       ymaps {
         width: 100%;
         border-radius: 20px;
+        transition-property: none;
 
         @include respondedBy(767px) {
           border-radius: 12px;
