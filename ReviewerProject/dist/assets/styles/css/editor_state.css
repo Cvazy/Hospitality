@@ -1,0 +1,6 @@
+#editorText .ce-toolbar__actions .ce-toolbar__plus {
+    background: white;
+}
+#editorText .ce-toolbar__actions .ce-toolbar__plus:hover {
+    background: #E2EAF2;
+}

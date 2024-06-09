@@ -1,0 +1,23 @@
+{
+  "name": "reviewerproject",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@editorjs/editorjs": "^2.29.1",
+    "@editorjs/header": "^2.8.1",
+    "@editorjs/image": "^2.9.0",
+    "@editorjs/inline-code": "^1.5.0",
+    "@editorjs/list": "^1.9.0",
+    "@vtchinh/gallery-editorjs": "^1.2.3",
+    "editorjs-youtube-embed": "^1.0.3"
+  }
+}

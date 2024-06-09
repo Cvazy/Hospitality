@@ -1,0 +1,1432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex" />
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <meta name="description" content="Page Not Founded">
+  <link rel="stylesheet" href="../public/assets/styles/css/style.css">
+  <link rel="stylesheet" href="../public/assets/styles/css/base.css">
+  <link rel="icon" href="../public/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="../public/assets/scripts/background/404.js" defer></script>
+  <title>HotelExpert - Ничего не найдено</title>
+</head>
+<body>
+
+<div class="d-none-imp auth_blackout blackout h-full-imp flex-items-baseline">
+  <div class="d-none-imp auth modal_help_form auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between">
+        <p class="help_form__title">
+          Помощь в регистрации
+        </p>
+
+        <div class="modal_help_form__close">
+          <img src="../public/assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form modal_help_auth_form" data-modal-auth-block="help">
+        <div class="modal_auth_form__wrapper">
+          <p class="m-0 text-main-gray lg-text text-start">
+            Наши специалисты бесплатно помогут вам зарегистрировать вашу компанию в нашем сервисе
+          </p>
+
+          <div class="modal_auth_form__input">
+            <input type="text" name="help_name" placeholder="Имя">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="help_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="tel" name="help_phone" placeholder="Телефон">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Оставить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="d-none-imp auth modal_recovery_form auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between">
+        <p class="recovery_form__title">
+          Восстановление пароля
+        </p>
+
+        <div class="modal_recovery_form__close">
+          <img src="../public/assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form modal_recovery_auth_form" data-modal-auth-block="help">
+        <div class="modal_auth_form__wrapper">
+          <p class="m-0 text-main-gray lg-text text-start">
+            Для восстановления пароля введите адрес электронной почты, указанный при бронировании:
+          </p>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="recovery_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Восстановить пароль
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="auth main_modal_auth auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between modal_auth__title gap-16px" data-modal-auth-title="login">
+        <p class="help_form__title">
+          Войдите в личный кабинет
+        </p>
+
+        <div class="auth_blackout_close">
+          <img src="../public/assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <div class="d-none-imp w-full flex-items-center justify-between modal_auth__title gap-16px" data-modal-auth-title="registration">
+        <p class="help_form__title">
+          Зарегистрируйте личный кабинет
+        </p>
+
+        <div class="auth_blackout_close">
+          <img src="../public/assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <div class="auth_modal__navigation">
+        <button type="button" data-modal-auth-btn="login" class="btn auth_modal__navigation-item modal_auth_block_active">
+          Войти
+        </button>
+
+        <button type="button" data-modal-auth-btn="registration" class="btn auth_modal__navigation-item">
+          Зарегистрироваться
+        </button>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form" data-modal-auth-block="login">
+        <div class="modal_auth_form__wrapper">
+          <div class="modal_auth_form__input">
+            <input type="email" name="login_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input class="mb_forget" type="password" name="login_password" placeholder="Пароль">
+
+            <img class="input_eye" src="../public/assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+
+            <a href="#" class="not-decor-link text-main-col sm-text modal_auth_recovery">
+              Забыли пароль?
+            </a>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Войти
+        </button>
+      </form>
+
+      <form method="post" action="#" class="d-none-imp modal_auth_form" data-modal-auth-block="registration">
+        <div class="modal_auth_form__wrapper">
+          <div class="modal_auth_form__input">
+            <input type="text" name="reg_name" placeholder="Имя">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="text" name="reg_lastname" placeholder="Фамилия">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="reg_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="password" name="reg_password1" placeholder="Пароль">
+
+            <img class="input_eye" src="../public/assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="password" name="reg_password2" placeholder="Повторите пароль">
+
+            <img class="input_eye" src="../public/assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Зарегистрироваться
+        </button>
+      </form>
+
+      <p class="alt_auth">
+        Или войдите через
+      </p>
+
+      <div class="auth_network">
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="../public/assets/images/auth/Google.svg" alt="Google" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              Google
+            </p>
+          </div>
+        </a>
+
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="../public/assets/images/auth/Apple.svg" alt="Apple" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              Apple
+            </p>
+          </div>
+        </a>
+
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="../public/assets/images/auth/VK.svg" alt="VK" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              VK
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <a href="#" class="d-none-imp not-decor-link modal_auth_info text-main-col">
+        <img class="d-block" src="../public/assets/images/auth/info-circle.svg" alt="Icon" loading="lazy">
+
+        Вы можете обратиться к нашим специалистам и они сделают это за Вас
+      </a>
+
+      <p class="m-0 xs-text text-main-gray text-start">
+        Входя в аккаунт, вы соглашаетесь с
+        <a href="#" class="not-decor-link text-main-col">
+          Условиями использования
+        </a>
+        и
+        <a href="#" class="not-decor-link text-main-col">
+          Политикой обработки персональных данных
+        </a>
+        Hospitality.ru
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="d-none-imp auth_blackout blackout h-full-imp flex-items-baseline">
+  <div class="d-none-imp auth modal_help_form auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between">
+        <p class="help_form__title">
+          Помощь в регистрации
+        </p>
+
+        <div class="modal_help_form__close">
+          <img src="../public/assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form modal_help_auth_form" data-modal-auth-block="help">
+        <div class="modal_auth_form__wrapper">
+          <p class="m-0 text-main-gray lg-text text-start">
+            Наши специалисты бесплатно помогут вам зарегистрировать вашу компанию в нашем сервисе
+          </p>
+
+          <div class="modal_auth_form__input">
+            <input type="text" name="help_name" placeholder="Имя">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="help_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="tel" name="help_phone" placeholder="Телефон">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Оставить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="d-none-imp auth modal_recovery_form auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between">
+        <p class="recovery_form__title">
+          Восстановление пароля
+        </p>
+
+        <div class="modal_recovery_form__close">
+          <img src="../public/assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form modal_recovery_auth_form" data-modal-auth-block="help">
+        <div class="modal_auth_form__wrapper">
+          <p class="m-0 text-main-gray lg-text text-start">
+            Для восстановления пароля введите адрес электронной почты, указанный при бронировании:
+          </p>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="recovery_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Восстановить пароль
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="auth main_modal_auth auth_block_position">
+    <div class="modal_form__wrapper">
+      <div class="w-full flex-items-center justify-between modal_auth__title gap-16px" data-modal-auth-title="login">
+        <p class="help_form__title">
+          Войдите в личный кабинет
+        </p>
+
+        <div class="auth_blackout_close">
+          <img src="../public/assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <div class="d-none-imp w-full flex-items-center justify-between modal_auth__title gap-16px" data-modal-auth-title="registration">
+        <p class="help_form__title">
+          Зарегистрируйте личный кабинет
+        </p>
+
+        <div class="auth_blackout_close">
+          <img src="../public/assets/images/icons/close-square.svg" alt="Close" loading="lazy">
+        </div>
+      </div>
+
+      <div class="auth_modal__navigation">
+        <button type="button" data-modal-auth-btn="login" class="btn auth_modal__navigation-item modal_auth_block_active">
+          Войти
+        </button>
+
+        <button type="button" data-modal-auth-btn="registration" class="btn auth_modal__navigation-item">
+          Зарегистрироваться
+        </button>
+      </div>
+
+      <form method="post" action="#" class="modal_auth_form" data-modal-auth-block="login">
+        <div class="modal_auth_form__wrapper">
+          <div class="modal_auth_form__input">
+            <input type="email" name="login_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input class="mb_forget" type="password" name="login_password" placeholder="Пароль">
+
+            <img class="input_eye" src="../public/assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+
+            <a href="#" class="not-decor-link text-main-col sm-text modal_auth_recovery">
+              Забыли пароль?
+            </a>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Войти
+        </button>
+      </form>
+
+      <form method="post" action="#" class="d-none-imp modal_auth_form" data-modal-auth-block="registration">
+        <div class="modal_auth_form__wrapper">
+          <div class="modal_auth_form__input">
+            <input type="text" name="reg_name" placeholder="Имя">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="text" name="reg_lastname" placeholder="Фамилия">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="email" name="reg_email" placeholder="Email">
+            <div class="errorHold"></div>
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="password" name="reg_password1" placeholder="Пароль">
+
+            <img class="input_eye" src="../public/assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+          </div>
+
+          <div class="modal_auth_form__input">
+            <input type="password" name="reg_password2" placeholder="Повторите пароль">
+
+            <img class="input_eye" src="../public/assets/images/icons/eye.svg" alt="Eye" loading="lazy">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn__auth w-full">
+          Зарегистрироваться
+        </button>
+      </form>
+
+      <p class="alt_auth">
+        Или войдите через
+      </p>
+
+      <div class="auth_network">
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="../public/assets/images/auth/Google.svg" alt="Google" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              Google
+            </p>
+          </div>
+        </a>
+
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="../public/assets/images/auth/Apple.svg" alt="Apple" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              Apple
+            </p>
+          </div>
+        </a>
+
+        <a href="#" class="not-decor-link auth_network__item">
+          <div class="flex-items-center gap-12px">
+            <img class="d-block" src="../public/assets/images/auth/VK.svg" alt="VK" loading="lazy">
+
+            <p class="m-0 lg-text text-dark text-medium">
+              VK
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <a href="#" class="d-none-imp not-decor-link modal_auth_info text-main-col">
+        <img class="d-block" src="../public/assets/images/auth/info-circle.svg" alt="Icon" loading="lazy">
+
+        Вы можете обратиться к нашим специалистам и они сделают это за Вас
+      </a>
+
+      <p class="m-0 xs-text text-main-gray text-start">
+        Входя в аккаунт, вы соглашаетесь с
+        <a href="#" class="not-decor-link text-main-col">
+          Условиями использования
+        </a>
+        и
+        <a href="#" class="not-decor-link text-main-col">
+          Политикой обработки персональных данных
+        </a>
+        Hospitality.ru
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="mobile" data-mobail-block="navigation">
+  <div class="mobile__menu">
+    <div class="mobile__menu-top relative">
+      <div class="mobile_header">
+        <div class="mobile_header__logo">
+          <a href="../index.html">
+            <img src="../public/assets/images/logotypes/mobile-dark-logo.svg" alt="Dark Logotype">
+          </a>
+        </div>
+
+        <div class="mobile_header__menu">
+          <button type="button" class="mb_action back_arrow">
+            <img src="../public/assets/images/icons/arrow-left.svg" alt="Back">
+          </button>
+
+          <button type="button" class="mb_action navClose">
+            <img src="../public/assets/images/icons/mobile-close.svg" alt="Close">
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile_nav_wrapper">
+        <ul class="mobile_nav">
+          <li onclick="mobileReviewMenu()">
+            <div class="mobile_nav__drop">
+              <div class="mobile_nav__item">
+                <p class="m-0 mb-nav_text">
+                  Отзывы
+                </p>
+
+                <div>
+                  <img class="mobile_nav__item_arrow" src="../public/assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+                </div>
+              </div>
+
+              <div class="mobile_nav__drop-list">
+                <a href="catalogHotel.html">
+                  Отели
+                </a>
+
+                <a href="catalogExcursion.html">
+                  Впечатления
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="blog.html" class="not-decor-link mb-nav_text">
+              Блог
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html" class="not-decor-link mb-nav_text">
+              О компании
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="not-decor-link mb-nav_text">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mobile__menu-bottom">
+      <div class="w-full">
+        <p class="text-dark-grey m-0">
+          Самое важное про текущую ситуацию:
+          <br>
+          <span class="border-underline-dark mt-4px">
+              <a href="#" class="text-dark text-medium not-decor-link">
+                сводка,
+              </a>
+
+              <a href="#" class="text-dark text-medium not-decor-link">
+                телеграм-канал
+              </a>
+          </span>
+        </p>
+      </div>
+
+      <div class="w-full">
+        <p class="text-dark-grey m-0">
+          Пн-Пт с 9:00 до 19:00
+          <br>
+
+        <div class="mt-12px">
+          <a class="text-dark not-decor-link text-medium" href="tel:+78822345300">
+            +7(882) 23-45-300
+          </a>
+        </div>
+        </p>
+      </div>
+
+      <a href="reviewAdd.html" class="d-block w-full btn btn__mobile not-decor-link">
+        Написать отзыв
+      </a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="w-full d-flex justify-center">
+    <div class="header__wrapper">
+      <div class="header_left">
+        <p class="text-light-grey m-0">
+          Самое важное про текущую ситуацию:
+
+          <span class="border-underline" id="headerUnderline">
+              <a href="#" data-text="header" class="text-white text-medium not-decor-link">
+                сводка,
+              </a>
+
+              <a href="#" data-text="header" class="text-white text-medium not-decor-link">
+                телеграм-канал
+              </a>
+          </span>
+        </p>
+      </div>
+
+      <div class="flex-items-center text-medium gap-2">
+        <p class="text-white-half m-0">
+          Пн-Пт с 9:00 до 19:00
+        </p>
+
+        <div>
+          <a data-text="header" class="text-white not-decor-link" href="tel:+78822345300">
+            +7(882) 23-45-300
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="w-full d-flex justify-center">
+    <div class="header__wrapper">
+      <div class="flex-items-center gap-4">
+        <a href="../index.html">
+          <img id="mainLogo" src="../public/assets/images/logotypes/logo.svg" alt="Logotype">
+          <img id="mainDarkLogo" style="display: none" src="../public/assets/images/logotypes/dark-logo.svg" alt="Logotype">
+        </a>
+
+        <nav>
+          <ul class="navigation_list gap-3">
+            <li class="navigation_list__item relative">
+              <a class="not-decor-link" href="#">
+                <div class="drop_menu" id="excursions">
+                  <p class="hotel_text text-white m-0 lh-20" data-text="header">
+                    Отзывы
+                  </p>
+
+                  <img class="user-select-none drop_menu_arrow" id="dropExcursionsArrow" src="../public/assets/images/icons/arrow_down.svg" alt="Arrow Down">
+
+                  <img class="drop_menu_arrow_dark" style="display: none" src="../public/assets/images/icons/arrow_down_dark.svg" alt="Arrow Down">
+                </div>
+              </a>
+
+              <div class="dropmenu_block" id="dropExcursionsMenu">
+                <div class="drop_container">
+                  <div class="drop_container__wrapper">
+                    <div class="menu_column">
+                      <a href="catalogHotel.html" class="text-nowrap d-block not-decor-link text-dark sm-text">
+                        Отели
+                      </a>
+
+                      <a href="catalogExcursion.html" class="text-nowrap d-block not-decor-link text-dark sm-text">
+                        Впечатления
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="navigation_list__item">
+              <a href="blog.html" data-text="header" class="text-white not-decor-link lh-20">
+                Блог
+              </a>
+            </li>
+
+            <li class="navigation_list__item">
+              <a href="about.html" data-text="header" class="text-white not-decor-link lh-20">
+                О компании
+              </a>
+            </li>
+
+            <li class="navigation_list__item">
+              <a href="contact.html" data-text="header" class="text-white not-decor-link lh-20">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex-items-center gap-3">
+        <div>
+          <a href="reviewAdd.html" data-text="header" class="text-white text-medium not-decor-link">
+            Написать отзыв
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="not-decor-link btn btn__login open_auth">
+            Войти
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile_top_header">
+  <div class="mobile_top_header__wrapper">
+    <div class="mobile_top_header__logo">
+      <a href="../index.html">
+        <img id="mobileLogo" src="../public/assets/images/logotypes/mobile-logo.svg" alt="Logotype">
+        <img id="mobileDarkLogo" style="display: none" src="../public/assets/images/logotypes/mobile-dark-logo.svg" alt="Logotype">
+      </a>
+    </div>
+
+    <div class="mobile_top_header__menu">
+      <button type="button" class="mb_action">
+        <img id="profile" src="../public/assets/images/icons/profile_icon.svg" alt="Profile">
+
+        <img id="darkProfile" style="display: none" src="../public/assets/images/icons/dark_profile_icon.svg" alt="Profile">
+      </button>
+
+      <button type="button" class="mb_action" id="burger">
+        <img src="../public/assets/images/icons/burger.svg" alt="Burger">
+
+        <img style="display: none" src="../public/assets/images/icons/dark_burger.svg" alt="Burger">
+      </button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <div class="header_bg header_bg__404">
+      <div class="not_found">
+        <img class="d-block" src="../public/assets/images/404.svg" alt="404" loading="lazy">
+
+        <div class="not_found__block">
+          <div class="not_found__block-top">
+            <p class="not_found__main">404</p>
+
+            <p class="not_found__title">
+              Ой... Мы не можем <br> найти эту страницу
+            </p>
+
+            <p class="not_found__description">
+              Мы сожалеем, но страница, на которую вы пытались перейти, не существует.
+            </p>
+          </div>
+
+          <a href="../index.html" class="not-decor-link btn btn__404">
+            На главную
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_block">
+      <div class="popular_offer">
+        <h2 class="container_block__title">
+          Популярные отзывы
+        </h2>
+
+        <div class="popular_offer__wrapper reviews w-full">
+          <div class="travels__wrapper reviews__wrapper swiper-wrapper swiper_trips">
+            <a href="#" class="swiper-slide flex-grow not-decor-link" data-item-id="1">
+              <div class="card_with_bg medium-card">
+                <div class="card_with_bg__wrapper">
+                  <div class="card_image">
+                    <img class="card_image__picture medium_image" src="../public/assets/images/reviews/review1.jpg" alt="Review" loading="lazy">
+
+                    <button data-btn-id="1" type="button" class="btn like heart">
+                      <img class="no_like" src="../public/assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                      <img class="d-none-imp click_like" src="../public/assets/images/icons/heart_click.svg" alt="Like">
+                    </button>
+                  </div>
+
+                  <div class="card_description gap-20px-imp">
+                    <div class="card_description__wrapper column-start">
+                      <div class="flex-items-start flex-col gap-4px">
+                        <p class="review_title">
+                          Экскурсия “Китай-город: Москва деловая, набожная, просвещенная”
+                        </p>
+
+                        <p class="review_place">
+                          Москва
+                        </p>
+                      </div>
+
+                      <p class="small-text-imp">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis deleniti dolorum ea eaque enim harum illo incidunt ipsam magni minima molestias numquam, odio possimus provident rerum sit veniam voluptate?
+                      </p>
+                    </div>
+
+                    <div class="card_description__wrapper small_desc">
+                      <p class="review_place">
+                        Елена Середова, 30.10.2022
+                      </p>
+
+                      <div class="rating">
+                        <div class="text-white xs-text text-bold">
+                          8,9
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="swiper-slide flex-grow not-decor-link" data-item-id="2">
+              <div class="card_with_bg medium-card">
+                <div class="card_with_bg__wrapper">
+                  <div class="card_image">
+                    <img class="card_image__picture medium_image" src="../public/assets/images/reviews/review2.jpg" alt="Review" loading="lazy">
+
+                    <button data-btn-id="2" type="button" class="btn like heart">
+                      <img class="no_like" src="../public/assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                      <img class="d-none-imp click_like" src="../public/assets/images/icons/heart_click.svg" alt="Like">
+                    </button>
+                  </div>
+
+                  <div class="card_description gap-20px-imp">
+                    <div class="card_description__wrapper column-start">
+                      <div class="flex-items-start flex-col gap-6px">
+                        <div class="flex-items-center gap-4px">
+                          <img width="16" class="d-block" src="../public/assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                          <img width="16" class="d-block" src="../public/assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                          <img width="16" class="d-block" src="../public/assets/images/icons/star.svg" alt="Star" loading="lazy">
+
+                          <img width="16" class="d-block" src="../public/assets/images/icons/star.svg" alt="Star" loading="lazy">
+                        </div>
+
+                        <div class="flex-items-start flex-col gap-4px">
+                          <p class="review_title">
+                            Отель «Family Holiday Hotel»
+                          </p>
+
+                          <p class="review_place">
+                            Москва, 2 гостя
+                          </p>
+                        </div>
+                      </div>
+
+                      <p class="small-text-imp">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis deleniti dolorum ea eaque enim harum illo incidunt ipsam magni minima molestias numquam, odio possimus provident rerum sit veniam voluptate?
+                      </p>
+                    </div>
+
+                    <div class="card_description__wrapper small_desc">
+                      <p class="review_place">
+                        Михаил Сазонов, 24.11.2022
+                      </p>
+
+                      <div class="rating">
+                        <div class="text-white xs-text text-bold">
+                          7,2
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="swiper-slide flex-grow not-decor-link" data-item-id="3">
+              <div class="card_with_bg medium-card">
+                <div class="card_with_bg__wrapper">
+                  <div class="card_image">
+                    <img class="card_image__picture medium_image" src="../public/assets/images/reviews/review3.jpg" alt="Review" loading="lazy">
+
+                    <button data-btn-id="3" type="button" class="btn like heart">
+                      <img class="no_like" src="../public/assets/images/icons/heart.svg" alt="Like" loading="lazy">
+
+                      <img class="d-none-imp click_like" src="../public/assets/images/icons/heart_click.svg" alt="Like">
+                    </button>
+                  </div>
+
+                  <div class="card_description gap-20px-imp">
+                    <div class="card_description__wrapper column-start">
+                      <div class="flex-items-start flex-col gap-4px">
+                        <p class="review_title">
+                          Экскурсия “Орлиные скалы, гора Ахун и Агурские водопады”
+                        </p>
+
+                        <p class="review_place">
+                          Сочи
+                        </p>
+                      </div>
+
+                      <p class="small-text-imp">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corporis deleniti dolorum ea eaque enim harum illo incidunt ipsam magni minima molestias numquam, odio possimus provident rerum sit veniam voluptate?
+                      </p>
+                    </div>
+
+                    <div class="card_description__wrapper small_desc">
+                      <p class="review_place">
+                        Ирина Иванова, 16.12.2022
+                      </p>
+
+                      <div class="rating">
+                        <div class="text-white xs-text text-bold">
+                          9,4
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="#" class="not-decor-link btn btn__loading_more">
+          Показать еще отзывы
+        </a>
+      </div>
+    </div>
+
+    <div class="container_block">
+      <div class="popular_offer">
+        <h2 class="container_block__title">
+          Блоги о путешествиях по России
+        </h2>
+
+        <div class="popular_offer__wrapper news w-full">
+          <div class="travels__wrapper swiper-wrapper news__wrapper swiper_news">
+            <a href="blogDetails.html" class="swiper-slide h-auto-imp flex-grow not-decor-link">
+              <div class="card_with_bg medium-card">
+                <div class="card_with_bg__wrapper h-full">
+                  <div class="card_image">
+                    <img class="card_image__picture medium_image" src="../public/assets/images/news/news1.jpg" alt="New" loading="lazy">
+                  </div>
+
+                  <div class="card_description gap-20px-imp h-full justify-between">
+                    <div class="card_description__wrapper gap-5px-imp column-start h-full">
+                      <span class="sm-text text-main-gray">
+                        18.11.2023
+                      </span>
+
+                      <h5>
+                        Как добраться до Петергофа: маршрут дл...
+                      </h5>
+
+                      <p class="small-text-imp">
+                        Доехать до Петергофа можно несколькими способами: на общественном транспорте, на...
+                      </p>
+                    </div>
+
+                    <div class="news_info">
+                      <div class="flex-items-center gap-4px">
+                        <div>
+                          <img src="../public/assets/images/icons/eye.svg" alt="Eye">
+                        </div>
+
+                        <div>
+                          <span class="text-main-gray sm-text">
+                            217
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="flex-items-center gap-4px">
+                        <div>
+                          <img src="../public/assets/images/icons/clock.svg" alt="Clock">
+                        </div>
+
+                        <div>
+                          <span class="text-main-gray sm-text">
+                            4 мин.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="blogDetails.html" class="swiper-slide h-auto-imp flex-grow not-decor-link">
+              <div class="card_with_bg medium-card">
+                <div class="card_with_bg__wrapper h-full">
+                  <div class="card_image">
+                    <img class="card_image__picture medium_image" src="../public/assets/images/news/news2.jpg" alt="New" loading="lazy">
+                  </div>
+
+                  <div class="card_description gap-20px-imp h-full justify-between">
+                    <div class="card_description__wrapper gap-5px-imp column-start h-full">
+                      <span class="sm-text text-main-gray">
+                        18.11.2023
+                      </span>
+
+                      <h5>
+                        Что привезти из Нижнего Новгорода: идеи, адреса...
+                      </h5>
+
+                      <p class="small-text-imp">
+                        Нижний Новгород является настоящим центром русского ремесла – здесь вы найдёте...
+                      </p>
+                    </div>
+
+                    <div class="news_info">
+                      <div class="flex-items-center gap-4px">
+                        <div>
+                          <img src="../public/assets/images/icons/eye.svg" alt="Eye">
+                        </div>
+
+                        <div>
+                          <span class="text-main-gray sm-text">
+                            217
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="flex-items-center gap-4px">
+                        <div>
+                          <img src="../public/assets/images/icons/clock.svg" alt="Clock">
+                        </div>
+
+                        <div>
+                          <span class="text-main-gray sm-text">
+                            4 мин.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="blogDetails.html" class="swiper-slide h-auto-imp flex-grow not-decor-link">
+              <div class="card_with_bg medium-card">
+                <div class="card_with_bg__wrapper h-full">
+                  <div class="card_image">
+                    <img class="card_image__picture medium_image" src="../public/assets/images/news/news3.jpg" alt="New" loading="lazy">
+                  </div>
+
+                  <div class="card_description gap-20px-imp h-full justify-between">
+                    <div class="card_description__wrapper gap-5px-imp column-start h-full">
+                      <span class="sm-text text-main-gray">
+                        18.11.2023
+                      </span>
+
+                      <h5>
+                        15 лучших музеев Москвы: описание...
+                      </h5>
+
+                      <p class="small-text-imp">
+                        Каждый день в столицу приезжают тысячи туристов, чтобы прогуляться по Красной...
+                      </p>
+                    </div>
+
+                    <div class="news_info">
+                      <div class="flex-items-center gap-4px">
+                        <div>
+                          <img src="../public/assets/images/icons/eye.svg" alt="Eye">
+                        </div>
+
+                        <div>
+                          <span class="text-main-gray sm-text">
+                            217
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="flex-items-center gap-4px">
+                        <div>
+                          <img src="../public/assets/images/icons/clock.svg" alt="Clock">
+                        </div>
+
+                        <div>
+                          <span class="text-main-gray sm-text">
+                            4 мин.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="blogDetails.html" class="swiper-slide h-auto-imp flex-grow not-decor-link">
+              <div class="card_with_bg medium-card">
+                <div class="card_with_bg__wrapper h-full">
+                  <div class="card_image">
+                    <img class="card_image__picture medium_image" src="../public/assets/images/news/news4.jpg" alt="New" loading="lazy">
+                  </div>
+
+                  <div class="card_description gap-20px-imp h-full justify-between">
+                    <div class="card_description__wrapper gap-5px-imp column-start h-full">
+                      <span class="sm-text text-main-gray">
+                        18.11.2023
+                      </span>
+
+                      <h5>
+                        Достопримечательности города Пушкино...
+                      </h5>
+
+                      <p class="small-text-imp">
+                        В окрестностях Санкт-Петербурга есть множество живописных мест с захватывающей историей...
+                      </p>
+                    </div>
+
+                    <div class="news_info">
+                      <div class="flex-items-center gap-4px">
+                        <div>
+                          <img src="../public/assets/images/icons/eye.svg" alt="Eye">
+                        </div>
+
+                        <div>
+                          <span class="text-main-gray sm-text">
+                            217
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="flex-items-center gap-4px">
+                        <div>
+                          <img src="../public/assets/images/icons/clock.svg" alt="Clock">
+                        </div>
+
+                        <div>
+                          <span class="text-main-gray sm-text">
+                            4 мин.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="blog.html" class="text-center md-w-full not-decor-link btn btn__loading_more">
+          Все статьи
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer__wrapper">
+    <div class="footer_top">
+      <a href="../index.html" class="d-block">
+        <img src="../public/assets/images/logotypes/dark-logo.svg" alt="Logotype" loading="lazy">
+      </a>
+
+      <a href="reviewAdd.html" class="flex-items-center btn btn__login not-decor-link link__lg">
+        Написать отзыв
+      </a>
+    </div>
+
+    <div class="footer_center">
+      <p class="text-dark m-0 footer_text">
+        Ищите жилье для отдыха или поездки?
+        Переходите на наш сайт
+        <a href="#" class="text-main-col not-decor-link">
+          Hospitality.ru
+        </a>
+      </p>
+
+      <a href="reviewAdd.html" class="w-full flex-items-center justify-center btn btn__login not-decor-link link__sm">
+        Написать отзыв
+      </a>
+
+      <nav class="footer_nav footer_center-lg">
+        <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Cлужба помощи
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="policyPage.html" class="not-decor-link text-dark">
+              Справочный раздел
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#" class="not-decor-link text-dark">
+              Контакты
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Меню
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#" class="not-decor-link text-dark">
+              Вопросы и ответы
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="blog.html" class="not-decor-link text-dark">
+              Новости
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="blog.html" class="not-decor-link text-dark">
+              Статьи
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="about.html" class="not-decor-link text-dark">
+              О компании
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Отзывы
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#" class="not-decor-link text-dark">
+              Об отелях
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#" class="not-decor-link text-dark">
+              О экскурсиях
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#" class="not-decor-link text-dark">
+              О театрах
+            </a>
+          </li>
+        </ul>
+
+        <ul class="footer_nav__list">
+          <li class="footer_nav__list-item mb-8px text-main-gray text-medium">
+            Услуги
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#" class="not-decor-link text-dark">
+              Забронировать отель
+            </a>
+          </li>
+
+          <li class="footer_nav__list-item">
+            <a href="#" class="not-decor-link text-dark">
+              Записаться на экскурсию
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer_center-sm">
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Служба помощи
+            </p>
+
+            <div>
+              <img class="footer_arrow" src="../public/assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Справочный раздел
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="contact.html" class="not-decor-link text-dark">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Меню
+            </p>
+
+            <div>
+              <img class="footer_arrow" src="../public/assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Вопросы и ответы
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="blog.html" class="not-decor-link text-dark">
+                Новости
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="blog.html" class="not-decor-link text-dark">
+                Статьи
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="about.html" class="not-decor-link text-dark">
+                О компании
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Отзывы
+            </p>
+
+            <div>
+              <img class="footer_arrow" src="../public/assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Об отелях
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                О экскурсиях
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                О театрах
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sm_footer_nav">
+          <div class="sm_footer_nav__item">
+            <p class="m-0 text-dark base-text">
+              Услуги
+            </p>
+
+            <div>
+              <img class="footer_arrow" src="../public/assets/images/icons/arrow_down_dark.svg" alt="Arrow">
+            </div>
+          </div>
+
+          <ul class="footer_nav__list">
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Забронировать отель
+              </a>
+            </li>
+
+            <li class="footer_nav__list-item">
+              <a href="#" class="not-decor-link text-dark">
+                Записаться на экскурсию
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="social_network">
+        <p class="m-0 text-center text-main-gray text-nowrap text-medium with_we">
+          Будьте с нами
+        </p>
+
+        <div class="flex-items-center gap-12px">
+          <a href="#" class="not-decor-link d-block">
+            <img src="../public/assets/images/networks/vk.svg" alt="VK" loading="lazy">
+          </a>
+
+          <a href="#" class="not-decor-link d-block">
+            <img src="../public/assets/images/networks/tg.svg" alt="Telegram" loading="lazy">
+          </a>
+
+          <a href="#" class="not-decor-link d-block">
+            <img src="../public/assets/images/networks/yt.svg" alt="Youtube" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="footer_bottom-top">
+        <div class="foot-top flex-items-center gap-32px-imp">
+          <a href="#" class="text-main-gray">
+            Политика обработки персональных данных
+          </a>
+
+          <a href="#" class="text-main-gray">
+            Правовая информация
+          </a>
+        </div>
+      </div>
+
+      <div class="footer_bottom-bottom">
+        <p class="text-main-gray m-0">
+          © Hotels-expert.store - отзывы о посещении отелей и достопримечательностей России. Все права защищены.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=viewport-units"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewport-units-buggyfill/0.6.2/viewport-units-buggyfill.js"></script>
+<script>
+    window.onload = function() {
+        window.viewportUnitsBuggyfill.init();
+    };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="../public/assets/scripts/auth/openHelpForm.js"></script>
+<script src="../public/assets/scripts/auth/authModal.js"></script>
+<script src="../public/assets/scripts/auth/seePassword.js"></script>
+<script src="../public/assets/scripts/auth/helpFormModal.js"></script>
+<script src="../public/assets/scripts/auth/authValidation.js"></script>
+<script src="../public/assets/scripts/account/emailValidator.js"></script>
+<script src="../public/assets/scripts/auth/openRecoveryPassword.js"></script>
+<script src="../public/assets/scripts/auth/recoveryPasswordModal.js"></script>
+<script src="../public/assets/scripts/headerScroll.js"></script>
+<script src="../public/assets/scripts/mobileHeader.js"></script>
+<script src="../public/assets/scripts/dropMenu.js"></script>
+<script src="../public/assets/scripts/addFunctionAttributes.js"></script>
+<script src="../public/assets/scripts/chooseExcTime.js"></script>
+<script src="../public/assets/scripts/openBookingModal.js"></script>
+<script src="../public/assets/scripts/closePopUpClick.js"></script>
+<script src="../public/assets/scripts/addSwiper.js"></script>
+<script src="../public/assets/scripts/clickLike.js"></script>
+<script src="../public/assets/scripts/popularOffer.js"></script>
+<script src="../public/assets/scripts/loadingMore.js"></script>
+<script src="../public/assets/scripts/footerNavigation.js"></script>
+
+</body>
+</html>
