@@ -105,10 +105,20 @@ function checkResolution() {
             }
         })
     } else {
-        mySwiper.destroy()
-        smallCardsSwiper.destroy()
-        reviewSwiper.destroy()
-        newsSwiper.destroy()
-        krimSwiper.destroy()
+        if (typeof mySwiper !== 'undefined' && mySwiper) {
+            mySwiper.destroy()
+        }
+        if (typeof smallCardsSwiper !== 'undefined' && smallCardsSwiper) {
+            smallCardsSwiper.destroy()
+        }
+        if (typeof reviewSwiper !== 'undefined' && reviewSwiper) {
+            reviewSwiper.destroy()
+        }
+        if (typeof newsSwiper !== 'undefined' && newsSwiper) {
+            newsSwiper.destroy()
+        }
+        if (typeof krimSwiper !== 'undefined' && krimSwiper) {
+            krimSwiper.destroy()
+        }
     }
 }
