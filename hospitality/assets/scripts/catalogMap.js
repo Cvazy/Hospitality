@@ -1,14 +1,17 @@
-const seeMapBtn = document.getElementById('seeMap')
+const seeMapBtns = document.querySelectorAll('.seeMap')
 const catalogMap = document.querySelector('.catalog__map')
 const closeMapBtn = document.querySelector('.close_map')
 const filterWrap = document.querySelector('.filters')
 const cardsWrap = document.querySelector('.cards')
 
-seeMapBtn.addEventListener('click', (event) => {
-    event.preventDefault()
-    catalogMap.classList.add('map_visible')
-    filterWrap.classList.add('catalog_none')
-    cardsWrap.classList.add('catalog_none')
+seeMapBtns.forEach((el) => {
+    el.addEventListener('click', (event) => {
+        event.preventDefault()
+        scrollTo(0, 0)
+        catalogMap.classList.add('map_visible')
+        filterWrap.classList.add('catalog_none')
+        cardsWrap.classList.add('catalog_none')
+    })
 })
 
 closeMapBtn.addEventListener('click', () => {
