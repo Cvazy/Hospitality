@@ -5,6 +5,7 @@ const newPasswordError = document.querySelector('.new_password_error')
 const checkPasswordText = document.getElementById('checkPasswordText')
 const checkPasswordLines = document.querySelectorAll('.new_password_error__line')
 const submitNewPassword = document.getElementById('submitNewPassword')
+const PasswordForm = document.getElementById('change_passord_form')
 
 newPasswordRepeatInput.addEventListener('input', (event) => {
     if (event.target.value !== newPasswordInput.value) {
@@ -51,30 +52,23 @@ function checkNewPassword(inputValue) {
 
     if (inputValue.length > 8) {
         checkCounter++
-        console.log('Условие 1')
     }
 
     if (/[a-z]/.test(inputValue)) {
         checkCounter++
-        console.log('Условие 2')
     }
 
     if (/[A-Z]/.test(inputValue)) {
         checkCounter++
-        console.log('Условие 3')
     }
 
     if (/\d/.test(inputValue)) {
         checkCounter++
-        console.log('Условие 4')
     }
 
     if (specialCharactersRegex.test(inputValue)) {
         checkCounter++
-        console.log('Условие 5')
     }
-
-    console.log(inputValue)
 
     if (checkCounter <= 2) {
         setCheckText('Слабая', 'red')
@@ -120,3 +114,31 @@ function setCheckText(text, color) {
     checkPasswordText.setAttribute('class', `text-${color}`)
 
 }
+
+PasswordForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+    console.log("here");
+    var formData = $(PasswordForm).serialize();
+    $.ajax({
+        url: PasswordForm["action"],
+        method: PasswordForm["method"],
+        data: formData,
+        dataType: 'json',
+        success: function(data){
+            if(data.status == 'success'){
+                $(PasswordForm).find(".js-results-error").html("");
+                $(PasswordForm).find(".js-results-success").html(data.message);
+
+                $(PasswordForm).find("input[type=password]").val("");
+            } else if(data.status == 'error') {
+                $(PasswordForm).find(".js-results-error").html(data.message);
+                $(PasswordForm).find(".js-results-success").html("");
+            }
+            document.querySelector('.account__main-top').scrollIntoView();
+        },
+        error: function(data){
+            $(PasswordForm).find(".js-error").html('Ошибка сохранения данных');
+            document.querySelector('.account__main-top').scrollIntoView();
+        }
+    });
+});

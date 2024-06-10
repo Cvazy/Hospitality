@@ -3,17 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const authBlackoutBlock = document.querySelector('.auth_blackout')
     const closeAuthBlock = document.querySelectorAll('.auth_blackout_close')
 
-    openAuthBtn.addEventListener('click', (event) => {
-        event.preventDefault()
-        window.scrollTo(0, 0)
-        authBlackoutBlock.classList.remove('d-none-imp')
-    })
-
-    closeAuthBlock.forEach((close) => {
-        close.addEventListener('click', () => {
-            authBlackoutBlock.classList.add('d-none-imp')
+    if (openAuthBtn) {
+        openAuthBtn.addEventListener('click', (event) => {
+            event.preventDefault()
+            window.scrollTo(0, 0)
+            authBlackoutBlock.classList.remove('d-none-imp')
         })
-    })
+
+        closeAuthBlock.forEach((close) => {
+            close.addEventListener('click', () => {
+                authBlackoutBlock.classList.add('d-none-imp')
+            })
+        })
+    }
 })
 
 const authModalBtns = document.querySelectorAll('.auth_modal__navigation-item')
